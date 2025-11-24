@@ -11,6 +11,7 @@ import Consultancy from './components/Consultancy';
 import Games from './components/Games';
 import About from './components/About';
 import Journal from './components/Journal';
+import JournalArticle from './components/JournalArticle';
 import Experiments from './components/Experiments';
 import Contact from './components/Contact';
 import CaseStudyIBW from './components/CaseStudyIBW';
@@ -27,11 +28,11 @@ const URL_TO_PAGE: Record<string, Page> = {
   '/consultancy': Page.CONSULTANCY,
   '/glasscape': Page.GLASSCAPE,
   '/glasscape/horizon': Page.GLASSCAPE_HORIZON,
-  '/work/india-blockchain-week': Page.CASE_STUDY_IBW,
-  '/work/reclaim-protocol': Page.CASE_STUDY_RECLAIM,
-  '/work/space-film': Page.CASE_STUDY_SPACE,
+  '/consultancy/india-blockchain-week': Page.CASE_STUDY_IBW,
+  '/consultancy/reclaim-protocol': Page.CASE_STUDY_RECLAIM,
+  '/consultancy/space-film': Page.CASE_STUDY_SPACE,
   '/work/wordsprint': Page.CASE_STUDY_WORDSPRINT,
-  '/work/micro-gold': Page.CASE_STUDY_MICRO_GOLD,
+  '/consultancy/micro-gold': Page.CASE_STUDY_MICRO_GOLD,
   '/games': Page.GAMES,
   '/about': Page.ABOUT,
   '/journal': Page.JOURNAL,
@@ -45,11 +46,11 @@ const PAGE_TO_URL: Record<Page, string> = {
   [Page.CONSULTANCY]: '/consultancy',
   [Page.GLASSCAPE]: '/glasscape',
   [Page.GLASSCAPE_HORIZON]: '/glasscape/horizon',
-  [Page.CASE_STUDY_IBW]: '/work/india-blockchain-week',
-  [Page.CASE_STUDY_RECLAIM]: '/work/reclaim-protocol',
-  [Page.CASE_STUDY_SPACE]: '/work/space-film',
+  [Page.CASE_STUDY_IBW]: '/consultancy/india-blockchain-week',
+  [Page.CASE_STUDY_RECLAIM]: '/consultancy/reclaim-protocol',
+  [Page.CASE_STUDY_SPACE]: '/consultancy/space-film',
   [Page.CASE_STUDY_WORDSPRINT]: '/work/wordsprint',
-  [Page.CASE_STUDY_MICRO_GOLD]: '/work/micro-gold',
+  [Page.CASE_STUDY_MICRO_GOLD]: '/consultancy/micro-gold',
   [Page.GAMES]: '/games',
   [Page.ABOUT]: '/about',
   [Page.JOURNAL]: '/journal',
@@ -114,6 +115,7 @@ const AppContent: React.FC = () => {
           <Route path="/games" element={<Games onNavigate={handleNavigate} />} />
           <Route path="/about" element={<About />} />
           <Route path="/journal" element={<Journal />} />
+          <Route path="/journal/:slug" element={<JournalArticle />} />
           <Route path="/experiments" element={<Experiments />} />
           <Route path="/contact" element={<Contact />} />
 
@@ -122,11 +124,11 @@ const AppContent: React.FC = () => {
           <Route path="/glasscape/horizon" element={<GlasscapeHorizon onNavigate={handleNavigate} />} />
 
           {/* Case Studies */}
-          <Route path="/work/india-blockchain-week" element={<CaseStudyIBW onNavigate={handleNavigate} />} />
-          <Route path="/work/reclaim-protocol" element={<CaseStudyReclaim onNavigate={handleNavigate} />} />
-          <Route path="/work/space-film" element={<CaseStudySpace onNavigate={handleNavigate} />} />
+          <Route path="/consultancy/india-blockchain-week" element={<CaseStudyIBW onNavigate={handleNavigate} />} />
+          <Route path="/consultancy/reclaim-protocol" element={<CaseStudyReclaim onNavigate={handleNavigate} />} />
+          <Route path="/consultancy/space-film" element={<CaseStudySpace onNavigate={handleNavigate} />} />
           <Route path="/work/wordsprint" element={<CaseStudyWordsprint onNavigate={handleNavigate} />} />
-          <Route path="/work/micro-gold" element={<CaseStudyMicroGold onNavigate={handleNavigate} />} />
+          <Route path="/consultancy/micro-gold" element={<CaseStudyMicroGold onNavigate={handleNavigate} />} />
 
           {/* 404 - Redirect to Home */}
           <Route path="*" element={<Navigate to="/" />} />

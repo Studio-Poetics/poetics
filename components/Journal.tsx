@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import SEO from './SEO';
-import { ArrowLeft } from 'lucide-react';
 
-interface Article {
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import SEO from './SEO';
+
+export interface Article {
     id: number;
+    slug: string;
     title: string;
     date: string;
     tag: string;
@@ -11,9 +13,10 @@ interface Article {
     content: React.ReactNode;
 }
 
-const articles: Article[] = [
+export const articles: Article[] = [
     {
         id: 1,
+        slug: 'building-technology-with-empathy',
         title: "Building Technology with Empathy",
         date: "Mar 10, 2024",
         tag: "Philosophy",
@@ -101,6 +104,7 @@ const articles: Article[] = [
     },
     {
         id: 2,
+        slug: 'gentle-future-of-digital-interfaces',
         title: "The Gentle Future of Digital Interfaces",
         date: "Mar 15, 2024",
         tag: "Design",
@@ -151,6 +155,7 @@ const articles: Article[] = [
     },
     {
         id: 3,
+        slug: 'blockchain-as-design-material',
         title: "Blockchain as a Design Material",
         date: "Mar 5, 2024",
         tag: "Technology",
@@ -218,6 +223,7 @@ const articles: Article[] = [
     },
     {
         id: 4,
+        slug: 'why-we-moved-to-prayagraj',
         title: "Why we moved to Prayagraj",
         date: "Aug 15, 2024",
         tag: "Studio",
@@ -250,80 +256,37 @@ const articles: Article[] = [
                 </p>
 
                 <p className="mb-8">
-                    In Prayagraj, we can afford to be selective. We can take on experimental work. We can spend months refining an idea without the pressure of immediate returns. This isn't romanticizing scarcity—it's recognizing that economic freedom creates creative freedom.
+                    In Prayagraj, our studio rent costs less than a single client dinner in South Mumbai. This economic breathing room allows us to say no to work that doesn't align with our values. It lets us invest time in R&D, in experiments, in essays like this one.
                 </p>
 
                 <p className="mb-16">
-                    Lower costs mean we control our time. And controlling our time means we can dedicate it to the kind of thoughtful, considered work we believe in.
+                    We're not escaping from ambition. We're creating the conditions where ambitious, meaningful work becomes possible.
                 </p>
 
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">A City of Confluences</h2>
+                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Connection to Context</h2>
                 <p className="mb-8">
-                    Prayagraj sits at the sangam—the confluence of three rivers. This geography feels symbolic. It's a place where different currents meet, where old and new exist side by side without one erasing the other.
+                    There's something profound about working in a place with deep historical memory. Prayagraj has been a confluence—literally and metaphorically—for thousands of years. Ideas, traditions, and people have always flowed through here.
                 </p>
 
                 <p className="mb-8">
-                    We see this in the city itself: ancient temples near modern infrastructure, traditional crafts alongside digital work, a pace of life that accommodates both urgency and contemplation. It's a reminder that innovation doesn't require abandoning the past. Sometimes, the most interesting work happens at the intersection.
+                    When we design here, we're reminded that we're not building in a vacuum. We're building in a country with complex traditions around craftsmanship, community, and contemplation. These aren't aesthetic inspirations to appropriate—they're living contexts to learn from.
                 </p>
 
                 <p className="mb-16">
-                    As a design studio, we're drawn to these confluences—technology and craft, digital and material, global perspectives and local contexts. Prayagraj embodies that spirit.
-                </p>
-
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Building Outside the Center</h2>
-                <p className="mb-8">
-                    There's a quiet power in building from what others consider the periphery. When you're not in the "center," you're forced to be more intentional. You can't rely on network effects or proximity to capital. You have to be genuinely good.
-                </p>
-
-                <p className="mb-8">
-                    This sharpens the work. It makes us think harder about who we're building for and why. It pushes us to communicate more clearly, to document better, to create work that speaks for itself without the amplification of ecosystem hype.
-                </p>
-
-                <p className="mb-16">
-                    Prayagraj doesn't offer the convenience of Bangalore or the glamour of Mumbai. But it offers something rarer: the conditions for depth. And depth, we believe, is what the world needs more of.
+                    Being here keeps us honest. It reminds us that technology doesn't exist in the abstract. It lands somewhere. It affects someone. And those someones deserve our attention.
                 </p>
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Slowness as Strategy</h2>
                 <p className="mb-8">
-                    In a culture obsessed with speed, slowness feels radical. Moving to Prayagraj was an act of choosing slowness—not as laziness, but as strategy. Slow enough to notice. Slow enough to care. Slow enough to build work that might actually last.
+                    Perhaps the most important reason we're here: we needed to learn to work slowly again. Not inefficiently, but deliberately. Not procrastinating, but processing.
                 </p>
 
                 <p className="mb-8">
-                    We still move fast when needed. We still ship. We still iterate. But we've reclaimed the right to pause, to reflect, to let ideas mature before forcing them into the world.
-                </p>
-
-                <p className="mb-16">
-                    This, ultimately, is why we moved: to protect the space where good work happens. To resist the pressure to always be seen, always be scaling, always be optimizing. To remember that some things—like ideas, like craft, like meaning—take time.
-                </p>
-
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">What We've Learned</h2>
-                <p className="mb-8">
-                    It hasn't been easy. We've dealt with infrastructure challenges, connectivity issues, and the occasional loneliness of being far from peers. But these challenges pale compared to what we've gained.
-                </p>
-
-                <p className="mb-8">
-                    We've learned that geography matters less than we thought, but environment matters more. That you can build world-class work from anywhere if you protect your attention and stay true to your values.
-                </p>
-
-                <p className="mb-8">
-                    We've learned that clients care about the quality of your thinking, not the address on your invoice. That the best collaborators will find you if your work speaks clearly enough.
-                </p>
-
-                <p className="mb-16">
-                    And we've learned that sometimes the most radical act isn't to chase the next big city—it's to step away and build from a place of groundedness.
-                </p>
-
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">An Invitation</h2>
-                <p className="mb-8">
-                    Prayagraj isn't for everyone, and that's not the point. The point is this: wherever you build from, make it a conscious choice. Ask yourself what kind of environment supports the work you want to make. Ask what you're optimizing for—visibility or substance, velocity or depth.
-                </p>
-
-                <p className="mb-8">
-                    For us, Prayagraj is where we've chosen to plant roots. It's where we've found the stillness we needed. And from that stillness, we're building the studio we believe the world needs.
+                    In the startup ecosystem, slowness is treated as failure. But some of our best work has emerged from long, meandering conversations. From sitting with a problem for weeks instead of hours. From letting ideas settle before rushing to execution.
                 </p>
 
                 <p className="mb-12">
-                    Not the loudest studio. Not the biggest. But one that stands for something: thoughtful work, human values, and the belief that good design emerges not from hustle, but from care.
+                    Prayagraj gives us permission for that pace. The city itself moves differently—not sluggishly, but with a kind of unhurried confidence. It's teaching us that urgency and importance aren't the same thing.
                 </p>
 
                 <p className="text-sm text-black/50 italic mt-16 border-t border-black/10 pt-8">
@@ -335,56 +298,7 @@ const articles: Article[] = [
 ];
 
 const Journal: React.FC = () => {
-    const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
-
-    if (selectedArticle) {
-        return (
-            <div className="min-h-screen pt-32 pb-24 px-6 md:px-12">
-                <SEO
-                    title={selectedArticle.title}
-                    description={`An essay on design and technology from Poetics Studio`}
-                    type="article"
-                    publishedDate={selectedArticle.date}
-                />
-
-                <div className="max-w-3xl mx-auto">
-                    {/* Back Button */}
-                    <button
-                        onClick={() => setSelectedArticle(null)}
-                        className="flex items-center gap-2 text-sm font-mono text-black/60 hover:text-[#FF4400] transition-colors mb-12 group"
-                    >
-                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                        Back to Journal
-                    </button>
-
-                    {/* Article Header */}
-                    <header className="mb-16 pb-8 border-b border-black/10">
-                        <div className="flex gap-4 items-center mb-6">
-                            <span className="font-mono text-xs text-black/40">{selectedArticle.date}</span>
-                            <span className="font-mono text-xs text-[#FF4400] uppercase tracking-widest">[{selectedArticle.tag}]</span>
-                        </div>
-                        <h1 className="text-4xl md:text-6xl font-light tracking-tight leading-tight">{selectedArticle.title}</h1>
-                    </header>
-
-                    {/* Featured Image */}
-                    {selectedArticle.image && (
-                        <div className="mb-16 -mx-6 md:mx-0">
-                            <img
-                                src={selectedArticle.image}
-                                alt={selectedArticle.title}
-                                className="w-full h-auto rounded-none md:rounded-sm"
-                            />
-                        </div>
-                    )}
-
-                    {/* Article Content */}
-                    <article className="prose prose-lg max-w-none leading-relaxed text-black/80">
-                        {selectedArticle.content}
-                    </article>
-                </div>
-            </div>
-        );
-    }
+    const navigate = useNavigate();
 
     return (
         <div className="min-h-screen pt-32 pb-24 px-6 md:px-12 max-w-4xl mx-auto">
@@ -412,7 +326,7 @@ const Journal: React.FC = () => {
                 {articles.map((article) => (
                     <article
                         key={article.id}
-                        onClick={() => setSelectedArticle(article)}
+                        onClick={() => navigate(`/journal/${article.slug}`)}
                         className="group border-t border-black/10 py-8 md:py-12 flex flex-col md:flex-row justify-between items-baseline cursor-pointer hover:bg-white transition-colors -mx-6 px-6"
                     >
                         <div className="md:w-3/4">
