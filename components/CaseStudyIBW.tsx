@@ -280,16 +280,20 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                      </div>
                 </div>
 
-                {/* Item 3: Mockup (Placeholder) */}
+                {/* Item 3: Event Snapshots */}
                 <div className="aspect-[4/3] md:col-span-2 relative overflow-hidden group">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="font-mono text-xs uppercase bg-white px-2 py-1 z-10">Event Wayfinding Mockup</span>
-                    </div>
-                    <img 
-                        src="https://picsum.photos/1600/900?grayscale&blur=2" 
-                        alt="Event Mockup" 
-                        className="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                    <img
+                        src="/images/ibw/mosaic.png"
+                        alt="Event Snapshots"
+                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
+                    <div className="absolute inset-0 bg-[#FF9933] mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+
+                    <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <span className="font-mono text-xs uppercase tracking-widest text-white">
+                            Event Snapshots
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>

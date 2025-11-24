@@ -5,7 +5,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://poetics.studio/</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,7 +17,7 @@
   <!-- Consultancy -->
   <url>
     <loc>https://poetics.studio/consultancy</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -25,7 +25,7 @@
   <!-- Games -->
   <url>
     <loc>https://poetics.studio/games</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,7 +33,7 @@
   <!-- Experiments -->
   <url>
     <loc>https://poetics.studio/experiments</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41,7 +41,7 @@
   <!-- Journal -->
   <url>
     <loc>https://poetics.studio/journal</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -49,7 +49,7 @@
   <!-- About -->
   <url>
     <loc>https://poetics.studio/about</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -57,44 +57,62 @@
   <!-- Contact -->
   <url>
     <loc>https://poetics.studio/contact</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Case Studies -->
   <url>
-    <loc>https://poetics.studio/case-study/ibw</loc>
-    <lastmod>2024-11-24</lastmod>
+    <loc>https://poetics.studio/work/india-blockchain-week</loc>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://poetics.studio/images/ibw/Hero.webp</image:loc>
+      <image:title>India Blockchain Week - Brand Identity</image:title>
+    </image:image>
   </url>
 
   <url>
-    <loc>https://poetics.studio/case-study/reclaim</loc>
-    <lastmod>2024-11-24</lastmod>
+    <loc>https://poetics.studio/work/reclaim-protocol</loc>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://poetics.studio/case-study/space</loc>
-    <lastmod>2024-11-24</lastmod>
+    <loc>https://poetics.studio/work/space-film</loc>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://poetics.studio/work/wordsprint</loc>
+    <lastmod>2024-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://poetics.studio/work/micro-gold</loc>
+    <lastmod>2024-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- Glasscape Projects -->
   <url>
     <loc>https://poetics.studio/glasscape</loc>
-    <lastmod>2024-11-24</lastmod>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://poetics.studio/glasscape-horizon</loc>
-    <lastmod>2024-11-24</lastmod>
+    <loc>https://poetics.studio/glasscape/horizon</loc>
+    <lastmod>2024-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
