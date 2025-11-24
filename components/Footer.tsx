@@ -83,9 +83,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="md:col-span-1">
                 <h5 className="font-mono text-xs uppercase tracking-widest text-white/40 mb-6">Coordinates</h5>
                 <ul className="space-y-4 text-sm font-light">
-                    <li><a href="#" className="hover:text-[#FF4400] transition-colors">Instagram</a></li>
-                    <li><a href="#" className="hover:text-[#FF4400] transition-colors">Are.na</a></li>
-                    <li><a href="#" className="hover:text-[#FF4400] transition-colors">Twitter (X)</a></li>
+                    <li><a href="https://www.instagram.com/studio.poetics/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4400] transition-colors">Instagram</a></li>
+                    <li><a href="https://www.are.na/share/lvhFvDM" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4400] transition-colors">Are.na</a></li>
+                    <li><a href="https://www.linkedin.com/in/pranshu101/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4400] transition-colors">LinkedIn</a></li>
                     <li><a href="mailto:hello@poetics.studio" className="hover:text-[#FF4400] transition-colors">hello@poetics.studio</a></li>
                 </ul>
             </div>
