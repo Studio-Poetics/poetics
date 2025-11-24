@@ -28,7 +28,7 @@ const projects: Project[] = [
     category: 'Branding & Identity',
     year: '2025',
     description: 'A vibrant collision of heritage and future. Defining the visual language of India\'s web3 revolution with generative mandalas.',
-    imageUrl: 'https://picsum.photos/600/800?grayscale&random=1', // REPLACE WITH REAL IMAGE
+    imageUrl: '/images/ibw/Hero.webp',
     targetPage: Page.CASE_STUDY_IBW
   },
   {

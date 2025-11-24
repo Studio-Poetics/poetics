@@ -337,25 +337,35 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
             {/* Masonry-ish Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px]">
-                
-                {/* 12 Image Slots with Specific Placeholders - USERS SHOULD REPLACE IMAGES */}
-                {[...Array(12)].map((_, i) => (
-                    <div 
-                        key={i} 
-                        className={`relative group overflow-hidden border-r border-b border-black/10 bg-white ${
-                            (i === 0 || i === 5 || i === 8) ? 'md:col-span-2' : '' // Create mosaic rhythm
-                        }`}
+
+                {/* IBW Images */}
+                {[
+                    { src: '/images/ibw/IBW Branding.webp', title: 'Brand Identity', span: 'md:col-span-2' },
+                    { src: '/images/ibw/IBW Logo.webp', title: 'Logo Design' },
+                    { src: '/images/ibw/IBW Brands.webp', title: 'Brand Applications' },
+                    { src: '/images/ibw/IBW Stage.webp', title: 'Stage Design' },
+                    { src: '/images/ibw/IBW Gate.webp', title: 'Entry Gate', span: 'md:col-span-2' },
+                    { src: '/images/ibw/IBW SIgnage.webp', title: 'Signage System' },
+                    { src: '/images/ibw/IBW Registration.webp', title: 'Registration Desk', span: 'md:col-span-2' },
+                    { src: '/images/ibw/IBW Stage 3.webp', title: 'Stage Graphics' },
+                    { src: '/images/ibw/IBW stage 4.webp', title: 'Visual Elements' },
+                    { src: '/images/ibw/IBW stage 5.webp', title: 'Event Atmosphere' },
+                    { src: '/images/ibw/IBW Ticketing booth.webp', title: 'Ticketing Booth' }
+                ].map((item, i) => (
+                    <div
+                        key={i}
+                        className={`relative group overflow-hidden border-r border-b border-black/10 bg-white ${item.span || ''}`}
                     >
-                        <img 
-                            src={`https://picsum.photos/seed/${i + 50}/800/800?grayscale`} 
-                            alt={`Collateral ${i+1}`}
+                        <img
+                            src={item.src}
+                            alt={item.title}
                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 filter contrast-125"
                         />
                         <div className="absolute inset-0 bg-[#FF9933] mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                        
+
                         <div className="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                             <span className="font-mono text-xs uppercase tracking-widest text-black">
-                                Archive Item {i+1}
+                                {item.title}
                             </span>
                         </div>
                     </div>
