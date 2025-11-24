@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Page } from './types';
 import Navigation from './components/Navigation';
 import HeroManifesto from './components/HeroManifesto';
@@ -20,81 +21,140 @@ import CaseStudyMicroGold from './components/CaseStudyMicroGold';
 import Glasscape from './components/Glasscape';
 import GlasscapeHorizon from './components/GlasscapeHorizon';
 
-const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
+// URL to Page mapping
+const URL_TO_PAGE: Record<string, Page> = {
+  '/': Page.HOME,
+  '/consultancy': Page.CONSULTANCY,
+  '/glasscape': Page.GLASSCAPE,
+  '/glasscape/horizon': Page.GLASSCAPE_HORIZON,
+  '/work/india-blockchain-week': Page.CASE_STUDY_IBW,
+  '/work/reclaim-protocol': Page.CASE_STUDY_RECLAIM,
+  '/work/space-film': Page.CASE_STUDY_SPACE,
+  '/work/wordsprint': Page.CASE_STUDY_WORDSPRINT,
+  '/work/micro-gold': Page.CASE_STUDY_MICRO_GOLD,
+  '/games': Page.GAMES,
+  '/about': Page.ABOUT,
+  '/journal': Page.JOURNAL,
+  '/experiments': Page.EXPERIMENTS,
+  '/contact': Page.CONTACT,
+};
 
-  // Helper to scroll to top on nav change
-  const handleNavigate = (page: Page) => {
-    setCurrentPage(page);
+// Page to URL mapping
+const PAGE_TO_URL: Record<Page, string> = {
+  [Page.HOME]: '/',
+  [Page.CONSULTANCY]: '/consultancy',
+  [Page.GLASSCAPE]: '/glasscape',
+  [Page.GLASSCAPE_HORIZON]: '/glasscape/horizon',
+  [Page.CASE_STUDY_IBW]: '/work/india-blockchain-week',
+  [Page.CASE_STUDY_RECLAIM]: '/work/reclaim-protocol',
+  [Page.CASE_STUDY_SPACE]: '/work/space-film',
+  [Page.CASE_STUDY_WORDSPRINT]: '/work/wordsprint',
+  [Page.CASE_STUDY_MICRO_GOLD]: '/work/micro-gold',
+  [Page.GAMES]: '/games',
+  [Page.ABOUT]: '/about',
+  [Page.JOURNAL]: '/journal',
+  [Page.EXPERIMENTS]: '/experiments',
+  [Page.CONTACT]: '/contact',
+};
+
+const AppContent: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, [location.pathname]);
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case Page.HOME:
-        return (
-          <>
-            <HeroManifesto />
-            <PoeticMachine />
-            <ProjectList onNavigate={handleNavigate} />
-          </>
-        );
-      case Page.CONSULTANCY:
-        return <Consultancy onNavigate={handleNavigate} />;
-      case Page.GLASSCAPE:
-        return <Glasscape onNavigate={handleNavigate} />;
-      case Page.GLASSCAPE_HORIZON:
-        return <GlasscapeHorizon onNavigate={handleNavigate} />;
-      case Page.CASE_STUDY_IBW:
-        return <CaseStudyIBW onNavigate={handleNavigate} />;
-      case Page.CASE_STUDY_RECLAIM:
-        return <CaseStudyReclaim onNavigate={handleNavigate} />;
-      case Page.CASE_STUDY_SPACE:
-        return <CaseStudySpace onNavigate={handleNavigate} />;
-      case Page.CASE_STUDY_WORDSPRINT:
-        return <CaseStudyWordsprint onNavigate={handleNavigate} />;
-      case Page.CASE_STUDY_MICRO_GOLD:
-        return <CaseStudyMicroGold onNavigate={handleNavigate} />;
-      case Page.GAMES:
-        return <Games onNavigate={handleNavigate} />;
-      case Page.ABOUT:
-        return <About />;
-      case Page.JOURNAL:
-        return <Journal />;
-      case Page.EXPERIMENTS:
-        return <Experiments />;
-      case Page.CONTACT:
-        return <Contact />;
-      default:
-        return <HeroManifesto />;
+  // Get current page from URL
+  const currentPage = URL_TO_PAGE[location.pathname] || Page.HOME;
+
+  // Navigation handler that uses React Router
+  const handleNavigate = (page: Page) => {
+    const url = PAGE_TO_URL[page];
+    if (url) {
+      navigate(url);
     }
   };
 
+  // Determine if navigation should be shown
+  const hideNavPages = [
+    Page.CASE_STUDY_IBW,
+    Page.CASE_STUDY_RECLAIM,
+    Page.CASE_STUDY_SPACE,
+    Page.CASE_STUDY_WORDSPRINT,
+    Page.CASE_STUDY_MICRO_GOLD,
+    Page.GLASSCAPE_HORIZON,
+  ];
+
+  const showNav = !hideNavPages.includes(currentPage);
+  const showFooter = currentPage !== Page.GLASSCAPE && currentPage !== Page.GLASSCAPE_HORIZON;
+
   return (
     <div className="min-h-screen flex flex-col w-full selection:bg-[#FF4400] selection:text-white bg-[#F6F6F4]">
-      {currentPage !== Page.CASE_STUDY_IBW && currentPage !== Page.CASE_STUDY_RECLAIM && currentPage !== Page.CASE_STUDY_SPACE && currentPage !== Page.CASE_STUDY_WORDSPRINT && currentPage !== Page.CASE_STUDY_MICRO_GOLD && currentPage !== Page.GLASSCAPE && currentPage !== Page.GLASSCAPE_HORIZON && (
-          <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
-      )}
-      {/* Navigation for Glasscape (We might want it visible but customized, for now we keep standard nav or hidden if full immersion desired. 
-          Let's show Nav for Glasscape to keep site navigable, but maybe dark mode compatible? 
-          For simplicity in this architecture, we will RENDER navigation but Glasscape overrides styles.
-      */}
-      {currentPage === Page.GLASSCAPE && (
-         // We render Navigation but overlay it or let it sit on top. 
-         // Since Navigation is fixed, it will appear.
-         // Ideally Navigation needs to support dark mode context.
-         // For now, let's keep it visible.
-          <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
-      )}
+      {showNav && <Navigation currentPage={currentPage} onNavigate={handleNavigate} />}
+      {currentPage === Page.GLASSCAPE && <Navigation currentPage={currentPage} onNavigate={handleNavigate} />}
 
-      <main className={`flex-grow ${currentPage !== Page.CASE_STUDY_IBW && currentPage !== Page.CASE_STUDY_RECLAIM && currentPage !== Page.CASE_STUDY_SPACE && currentPage !== Page.CASE_STUDY_WORDSPRINT && currentPage !== Page.CASE_STUDY_MICRO_GOLD && currentPage !== Page.GLASSCAPE && currentPage !== Page.GLASSCAPE_HORIZON ? 'pt-16' : ''} animate-in fade-in duration-500`}>
-        {renderPage()}
+      <main className={`flex-grow ${showNav ? 'pt-16' : ''} animate-in fade-in duration-500`}>
+        <Routes>
+          {/* Home Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroManifesto />
+                <PoeticMachine />
+                <ProjectList onNavigate={handleNavigate} />
+              </>
+            }
+          />
+
+          {/* Main Pages */}
+          <Route path="/consultancy" element={<Consultancy onNavigate={handleNavigate} />} />
+          <Route path="/games" element={<Games onNavigate={handleNavigate} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/journal" element={<Journal />} />
+          <Route path="/experiments" element={<Experiments />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Glasscape */}
+          <Route path="/glasscape" element={<Glasscape onNavigate={handleNavigate} />} />
+          <Route path="/glasscape/horizon" element={<GlasscapeHorizon onNavigate={handleNavigate} />} />
+
+          {/* Case Studies */}
+          <Route path="/work/india-blockchain-week" element={<CaseStudyIBW onNavigate={handleNavigate} />} />
+          <Route path="/work/reclaim-protocol" element={<CaseStudyReclaim onNavigate={handleNavigate} />} />
+          <Route path="/work/space-film" element={<CaseStudySpace onNavigate={handleNavigate} />} />
+          <Route path="/work/wordsprint" element={<CaseStudyWordsprint onNavigate={handleNavigate} />} />
+          <Route path="/work/micro-gold" element={<CaseStudyMicroGold onNavigate={handleNavigate} />} />
+
+          {/* 404 - Redirect to Home */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </main>
-      
-      {currentPage !== Page.GLASSCAPE && currentPage !== Page.GLASSCAPE_HORIZON && <Footer onNavigate={handleNavigate} />}
-      {/* Glasscape has its own footer style or included footer */}
-      {(currentPage === Page.GLASSCAPE || currentPage === Page.GLASSCAPE_HORIZON) && <Footer onNavigate={handleNavigate} />}
+
+      {showFooter && <Footer onNavigate={handleNavigate} />}
+      {(currentPage === Page.GLASSCAPE || currentPage === Page.GLASSCAPE_HORIZON) && (
+        <Footer onNavigate={handleNavigate} />
+      )}
     </div>
+  );
+};
+
+// Navigate component for 404 redirect
+const Navigate: React.FC<{ to: string }> = ({ to }) => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(to);
+  }, [to, navigate]);
+  return null;
+};
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 };
 
