@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F6F6F4" />
+
+    <!-- Primary SEO Tags -->
+    <title>Poetics Studio - Design, Technology & Art from India</title>
+    <meta name="title" content="Poetics Studio - Design, Technology & Art from India" />
+    <meta name="description" content="A sense-making studio practice exploring the intersection of technology, design, and art. Strategic UX, generative systems, and poetic technology from Prayagraj and Goa." />
+    <meta name="keywords" content="Design Studio India, Strategic UX, Generative Art, Poetic Technology, Interaction Design, Prayagraj Design, Goa Design Studio, UX Consultancy, Product Design" />
+    <meta name="author" content="Poetics Studio" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://poetics.studio/" />
+    <meta property="og:title" content="Poetics Studio - Design, Technology & Art" />
+    <meta property="og:description" content="A sense-making studio practice exploring the intersection of technology, design, and art. Operating from Prayagraj and Goa." />
+    <meta property="og:image" content="https://poetics.studio/og-image.svg" />
+    <meta property="og:site_name" content="Poetics Studio" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://poetics.studio/" />
+    <meta name="twitter:title" content="Poetics Studio - Design, Technology & Art" />
+    <meta name="twitter:description" content="A sense-making studio practice exploring the intersection of technology, design, and art." />
+    <meta name="twitter:image" content="https://poetics.studio/og-image.svg" />
+    <meta name="twitter:site" content="@poeticsstudio" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://poetics.studio/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Additional SEO -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="geo.region" content="IN-UP" />
+    <meta name="geo.placename" content="Prayagraj, Goa" />
+    <meta name="geo.position" content="25.4358;81.8463" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Fonts & Utilities */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F6F6F4; /* Paper-like off-white */
+        color: #111;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      /* Tactile Noise Texture - Kenya Hara inspiration */
+      .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* Utility for hiding scrollbar but keeping functionality */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Selection color - Rams Orange */
+      ::selection {
+        background: #FF4400;
+        color: white;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/jsx-runtime": "https://aistudiocdn.com/react@^19.2.0/jsx-runtime",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <div class="noise-overlay"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
