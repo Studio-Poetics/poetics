@@ -81,12 +81,10 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                     {/* Product 01 - Horizon */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group cursor-pointer" onClick={() => onNavigate(Page.GLASSCAPE_HORIZON)}>
                         <div className="aspect-[4/5] bg-[#151515] relative overflow-hidden">
-                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
-                             <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                              <img
                                 src="/images/glasscape/Glasscape-1.png"
                                 alt="Glasscape Horizon"
-                                className="w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                         <div className="md:px-12">
@@ -116,12 +114,10 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                     {/* Product 02 - Monolith */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
                         <div className="md:order-2 aspect-[4/5] bg-[#151515] relative overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
-                             <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                              <img
                                 src="/images/glasscape/Glasscape-2.png"
                                 alt="Glasscape Monolith"
-                                className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                         <div className="md:px-12 md:order-1">
@@ -147,12 +143,10 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                     {/* Product 03 - CityScape */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
                         <div className="aspect-[16/9] md:aspect-[4/5] bg-[#151515] relative overflow-hidden">
-                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
-                             <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-emerald-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                              <img
                                 src="/images/glasscape/Glasscape-aquarium.png"
                                 alt="Glasscape CityScape"
-                                className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                         <div className="md:px-12">

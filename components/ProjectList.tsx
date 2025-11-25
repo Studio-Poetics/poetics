@@ -42,21 +42,21 @@ const projects: Project[] = [
   },
   {
     id: '03',
-    title: 'Glasscape Collection',
-    category: 'Product Design',
-    year: '2024',
-    description: 'Holographic displays for the modern sanctuary. Building with the immaterial.',
-    imageUrl: '/images/glasscape/Glasscape-1.png',
-    targetPage: Page.GLASSCAPE
-  },
-  {
-    id: '04',
     title: 'India\'s Journey in Space',
     category: 'Anamorphic 3D Film',
     year: '2024',
     description: 'A 5-minute 3D anamorphic film for Science City Kolkata showcasing the history of the Indian Space Program.',
     imageUrl: '/images/space/home-space.webp',
     targetPage: Page.CASE_STUDY_SPACE
+  },
+  {
+    id: '04',
+    title: 'Glasscape Collection',
+    category: 'Product Design',
+    year: '2024',
+    description: 'Holographic displays for the modern sanctuary. Building with the immaterial.',
+    imageUrl: '/images/glasscape/Glasscape-1.png',
+    targetPage: Page.GLASSCAPE
   },
   {
     id: '05',
