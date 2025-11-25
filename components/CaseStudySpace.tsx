@@ -36,13 +36,13 @@ const CaseStudySpace: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
         {/* ======================== HERO SECTION ======================== */}
         <div className="relative w-full h-[80vh] flex flex-col justify-end px-6 md:px-12 pb-24 border-b border-white/10">
-            {/* EDIT HERO IMAGE */}
+            {/* Hero Image */}
             <div className="absolute inset-0 z-0">
                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10" />
-                 <img 
-                    src="https://picsum.photos/1920/1080?grayscale&blur=2" 
-                    alt="Space Anamorphic Render" 
-                    className="w-full h-full object-cover opacity-60"
+                 <img
+                    src="/images/space/hero.png"
+                    alt="India's Journey in Space - Anamorphic 3D Film"
+                    className="w-full h-full object-cover opacity-70"
                  />
             </div>
 
@@ -97,20 +97,17 @@ const CaseStudySpace: React.FC<CaseStudyProps> = ({ onNavigate }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
                 {/* Still 1 */}
                 <div className="aspect-video bg-[#111] border border-white/10 relative overflow-hidden group">
-                     {/* EDIT IMAGE */}
-                     <img src="https://picsum.photos/800/450?grayscale" alt="Rocket Launch" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                     <img src="/images/space/astronaut.png" alt="Astronaut" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                      <div className="absolute bottom-4 left-4 font-mono text-xs text-white/50">Seq 01: The First Launch</div>
                 </div>
                 {/* Still 2 */}
                 <div className="aspect-video bg-[#111] border border-white/10 relative overflow-hidden group">
-                     {/* EDIT IMAGE */}
-                     <img src="https://picsum.photos/800/451?grayscale" alt="Mars Orbiter" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                     <img src="/images/space/mangalyaan.png" alt="Mars Orbiter - Mangalyaan" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                      <div className="absolute bottom-4 left-4 font-mono text-xs text-white/50">Seq 03: Mangalyaan (MOM)</div>
                 </div>
                 {/* Still 3 (Wide) */}
                 <div className="aspect-video bg-[#111] border border-white/10 relative overflow-hidden group md:col-span-2">
-                     {/* EDIT IMAGE */}
-                     <img src="https://picsum.photos/1600/900?grayscale" alt="Chandrayaan Landing" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                     <img src="/images/space/chandrayaan.png" alt="Chandrayaan Landing" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                      <div className="absolute bottom-4 left-4 font-mono text-xs text-white/50">Seq 05: Chandrayaan Landing</div>
                 </div>
             </div>
