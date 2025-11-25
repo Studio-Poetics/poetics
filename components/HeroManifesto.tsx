@@ -19,7 +19,7 @@ const HeroManifesto: React.FC = () => {
         
         {/* Left Column: Metadata */}
         <div className="md:col-span-2 hidden md:block font-mono text-xs text-black/40 leading-relaxed sticky top-32 h-fit">
-          <p>EST. 2024</p>
+          <p>EST. 2023</p>
           <p>PRAYAGRAJ / GOA / CLOUD</p>
           <br/>
           <p>PRINCIPLES:</p>
