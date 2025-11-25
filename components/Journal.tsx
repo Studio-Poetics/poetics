@@ -290,7 +290,7 @@ export const articles: Article[] = [
                 </p>
 
                 <p className="text-sm text-black/50 italic mt-16 border-t border-black/10 pt-8">
-                    Written from our studio in Prayagraj, where the Ganga flows quietly and ideas have room to breathe.
+                    Written from our studio in Prayagraj/Goa/Cloud.
                 </p>
             </>
         )
