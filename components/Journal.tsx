@@ -130,7 +130,7 @@ export const articles: Article[] = [
                 </p>
 
                 <p className="mb-16">
-                    Sometimes, that means resisting the urge to fill every inch with information. Other times, it means adding just the right motion—enough to feel alive, not enough to distract. This is the quiet choreography of thoughtful design. And while it might not win immediate attention, it builds a lasting sense of trust.
+                    Sometimes, that means resisting the urge to fill every inch with information. Other times, it means adding just the right amount of motion, enough to feel alive, and borderline short to distraction. And while it might not win immediate attention, it builds a lasting sense of trust.
                 </p>
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Kindness, Embedded</h2>
