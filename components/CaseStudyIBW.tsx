@@ -88,23 +88,21 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
             </div>
 
             {/* Right: IBW Logogram Video */}
-            <div className="w-full md:w-1/2 bg-[#111] relative flex items-center justify-center overflow-hidden min-h-[50vh] md:min-h-auto">
-                {/* Video Container */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                    <video
-                        className="w-[80%] aspect-square object-contain"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                    >
-                        <source src="/wave.webm" type="video/webm" />
-                        {/* Fallback for browsers that don't support video */}
-                        <div className="w-full h-full flex items-center justify-center">
-                            <span className="text-white font-mono text-xs">IBW Logogram</span>
-                        </div>
-                    </video>
-                </div>
+            <div className="w-full md:w-1/2 bg-[#111] relative overflow-hidden min-h-[50vh] md:min-h-auto">
+                {/* Video - Full Cover */}
+                <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                >
+                    <source src="/wave.mp4" type="video/mp4" />
+                    {/* Fallback for browsers that don't support video */}
+                    <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-white font-mono text-xs">IBW Logogram</span>
+                    </div>
+                </video>
 
                 {/* Texture Overlay */}
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
