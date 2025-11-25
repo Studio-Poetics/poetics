@@ -1,20 +1,22 @@
 
 import React from 'react';
 import SEO from './SEO';
+import { ArrowRight } from 'lucide-react';
 import { Page } from '../types';
 
 interface GamesProps {
-  onNavigate?: (page: Page) => void;
+  onNavigate: (page: Page) => void;
 }
 
 const Games: React.FC<GamesProps> = ({ onNavigate }) => {
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6 md:px-12">
-        <SEO 
+    <div className="min-h-screen pt-32 pb-24 px-6 md:px-12 bg-[#F0F0EE]">
+        <SEO
             title="Ludic Interfaces & Indie Games"
-            description="We develop off-beat games using custom hardware and mundane objects. Exploring play as the highest form of research."
-            keywords={['Indie Game Dev', 'Custom Hardware Games', 'Alt Ctrl', 'Generative Gaming', 'Interactive Art', 'Digital Toys']}
+            description="We develop games that explore play as the highest form of research. Monsoon Stories and Wordsprint."
+            keywords={['Indie Game Dev', 'Monsoon Stories', 'Wordsprint', 'Cozy Games', 'Narrative Games']}
         />
+
         <header className="mb-24 max-w-6xl mx-auto">
             <span className="font-mono text-xs uppercase tracking-widest text-[#FF4400] mb-4 block">Ludic Interfaces</span>
             <h1 className="text-5xl md:text-8xl font-light tracking-tighter leading-[0.9] mb-12">
@@ -22,74 +24,136 @@ const Games: React.FC<GamesProps> = ({ onNavigate }) => {
             </h1>
         </header>
 
-        <section className="mb-32">
-            <div className="max-w-6xl mx-auto border-b border-black/10 pb-4 mb-12 flex justify-between items-end">
-                <h2 className="text-2xl font-light">Off-Beat Games</h2>
-                <span className="text-xs font-mono text-black/50 max-w-xs text-right hidden md:block">
-                    Custom hardware. Mundane objects re-imagined.
-                </span>
-            </div>
+        {/* ======================== TWO GAMES GRID ======================== */}
+        <section className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            {/* ======================== OFF-BEAT GAMES LIST ======================== */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-                
-                {/* Game 1 */}
+                {/* ======================== MONSOON STORIES ======================== */}
                 <div
-                    className="group cursor-pointer"
-                    onClick={() => onNavigate && onNavigate(Page.CASE_STUDY_WORDSPRINT)}
+                    className="bg-white border border-black/5 overflow-hidden cursor-pointer group"
+                    onClick={() => onNavigate(Page.MONSOON_STORIES)}
                 >
-                    <div className="aspect-square bg-[#E0E0E0] mb-6 overflow-hidden relative">
-                        {/* EDIT IMAGE HERE */}
-                        <img src="https://picsum.photos/800/800?grayscale&random=10" alt="Wordsprint" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
-                    </div>
-                    {/* EDIT TEXT HERE */}
-                    <h3 className="text-xl font-medium">Wordsprint</h3>
-                    <p className="text-sm text-black/60 mt-2 leading-relaxed">
-                        An Android vocabulary game where players practice language by unscrambling words and learning their meanings through interactive gameplay.
-                    </p>
-                </div>
+                    <div className="relative bg-gradient-to-br from-[#7B8FA1] to-[#4A5F73] h-[400px] overflow-hidden">
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                         {/* Placeholder for atmospheric image */}
+                         <img
+                            src="https://picsum.photos/1000/1000?grayscale&blur=2"
+                            alt="Monsoon Stories Atmosphere"
+                            className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                         />
 
-                {/* Game 2 */}
-                <div className="group cursor-pointer md:mt-24">
-                    <div className="aspect-square bg-[#E0E0E0] mb-6 overflow-hidden relative">
-                         {/* EDIT IMAGE HERE */}
-                         <img src="https://picsum.photos/800/800?grayscale&random=11" alt="Game 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
-                    </div>
-                    {/* EDIT TEXT HERE */}
-                    <h3 className="text-xl font-medium">Rain Drop Symphony</h3>
-                    <p className="text-sm text-black/60 mt-2 leading-relaxed">
-                        Piezo sensors attached to an umbrella that turn rain impact into a generative rhythm game played by walking in a storm.
-                    </p>
-                </div>
+                         <span className="absolute bottom-6 left-6 text-white font-mono text-xs uppercase tracking-widest z-20 opacity-80">
+                             Work In Progress
+                         </span>
 
-            </div>
-            {/* ===================================================================== */}
-        </section>
-
-        <section>
-            <div className="max-w-6xl mx-auto border-b border-black/10 pb-4 mb-12 flex justify-between items-end">
-                <h2 className="text-2xl font-light">Digital Experiences</h2>
-                <span className="text-xs font-mono text-black/50 hidden md:block">
-                    Screen-based immersion.
-                </span>
-            </div>
-
-            {/* ======================== DIGITAL GAMES LIST ======================== */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                 {[1, 2, 3].map((i) => (
-                    <div key={i} className="group cursor-pointer">
-                         <div className="aspect-video bg-[#E0E0E0] mb-4 overflow-hidden">
-                             {/* EDIT IMAGE HERE */}
-                             <img src={`https://picsum.photos/600/400?grayscale&random=${12+i}`} alt="Digital Game" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"/>
+                         {/* Hover overlay */}
+                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500 z-10 flex items-center justify-center">
+                            <span className="text-white font-mono text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 px-4 py-2 backdrop-blur-sm">
+                                View Project →
+                            </span>
                          </div>
-                         {/* EDIT TEXT HERE */}
-                         <h3 className="text-lg font-medium">Void Walker {i}</h3>
-                         <span className="text-xs font-mono uppercase text-black/40">PC / Mac / Linux</span>
                     </div>
-                 ))}
+
+                    <div className="p-8 lg:p-12">
+                        <div className="mb-6">
+                            <span className="font-mono text-xs text-[#FF4400] uppercase tracking-widest mb-3 block">In Development</span>
+                            <h2 className="text-3xl md:text-4xl font-light mb-4 group-hover:text-[#FF4400] transition-colors">Monsoon Stories</h2>
+                            <p className="text-black/70 leading-relaxed mb-6">
+                                A warm, cozy narrative game about reliving 100 monsoons and the stories within them.
+                                Like a moving picture book.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-6 font-mono text-xs text-black/50 uppercase tracking-widest border-t border-black/5 pt-6">
+                            <div>
+                                <span className="block text-black/30 mb-1">Genre</span>
+                                Narrative / Cozy
+                            </div>
+                            <div>
+                                <span className="block text-black/30 mb-1">Platform</span>
+                                PC / Mac
+                            </div>
+                            <div>
+                                <span className="block text-black/30 mb-1">Status</span>
+                                Storyboarding
+                            </div>
+                            <div>
+                                <span className="block text-black/30 mb-1">Stage</span>
+                                Pre-Alpha
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ======================== WORDSPRINT ======================== */}
+                <div
+                    className="bg-white border border-black/5 overflow-hidden cursor-pointer group"
+                    onClick={() => onNavigate(Page.CASE_STUDY_WORDSPRINT)}
+                >
+                    <div className="relative bg-gradient-to-br from-[#E0E5EC] to-[#C9D1D9] h-[400px] overflow-hidden">
+                         {/* Placeholder for Wordsprint screenshot */}
+                         <img
+                            src="https://picsum.photos/800/800?grayscale&random=12"
+                            alt="Wordsprint Game"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                         />
+
+                         <div className="absolute bottom-6 left-6 bg-white text-black text-xs font-mono px-3 py-1 uppercase tracking-widest z-20">
+                             Published
+                         </div>
+
+                         {/* Hover overlay */}
+                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500 z-10 flex items-center justify-center">
+                            <span className="text-white font-mono text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 px-4 py-2 backdrop-blur-sm">
+                                View Case Study →
+                            </span>
+                         </div>
+                    </div>
+
+                    <div className="p-8 lg:p-12">
+                        <div className="mb-6">
+                            <span className="font-mono text-xs text-[#FF4400] uppercase tracking-widest mb-3 block">Android / iOS</span>
+                            <h2 className="text-3xl md:text-4xl font-light mb-4 group-hover:text-[#FF4400] transition-colors">Wordsprint</h2>
+                            <p className="text-black/70 leading-relaxed mb-6">
+                                A fast, engaging English word game that turns everyday moments into meaningful learning through calm, distraction-free gameplay.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-6 font-mono text-xs text-black/50 uppercase tracking-widest border-t border-black/5 pt-6">
+                            <div>
+                                <span className="block text-black/30 mb-1">Genre</span>
+                                Educational / Puzzle
+                            </div>
+                            <div>
+                                <span className="block text-black/30 mb-1">Platform</span>
+                                Android / iOS
+                            </div>
+                            <div>
+                                <span className="block text-black/30 mb-1">Year</span>
+                                2023
+                            </div>
+                            <div>
+                                <span className="block text-black/30 mb-1">Downloads</span>
+                                10,000+
+                            </div>
+                        </div>
+
+                        <div className="pt-6 mt-6 border-t border-black/5">
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.studiopoetics.wordsprintenglish"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest hover:text-[#FF4400] transition-colors"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <span>Play Store</span>
+                                <ArrowRight className="w-3 h-3" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            {/* ==================================================================== */}
         </section>
     </div>
   );

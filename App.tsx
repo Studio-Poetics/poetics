@@ -9,6 +9,7 @@ import ProjectList from './components/ProjectList';
 import Footer from './components/Footer';
 import Consultancy from './components/Consultancy';
 import Games from './components/Games';
+import MonsoonStories from './components/MonsoonStories';
 import About from './components/About';
 import Journal from './components/Journal';
 import JournalArticle from './components/JournalArticle';
@@ -34,6 +35,7 @@ const URL_TO_PAGE: Record<string, Page> = {
   '/work/wordsprint': Page.CASE_STUDY_WORDSPRINT,
   '/consultancy/micro-gold': Page.CASE_STUDY_MICRO_GOLD,
   '/games': Page.GAMES,
+  '/games/monsoon-stories': Page.MONSOON_STORIES,
   '/about': Page.ABOUT,
   '/journal': Page.JOURNAL,
   '/experiments': Page.EXPERIMENTS,
@@ -52,6 +54,7 @@ const PAGE_TO_URL: Record<Page, string> = {
   [Page.CASE_STUDY_WORDSPRINT]: '/work/wordsprint',
   [Page.CASE_STUDY_MICRO_GOLD]: '/consultancy/micro-gold',
   [Page.GAMES]: '/games',
+  [Page.MONSOON_STORIES]: '/games/monsoon-stories',
   [Page.ABOUT]: '/about',
   [Page.JOURNAL]: '/journal',
   [Page.EXPERIMENTS]: '/experiments',
@@ -95,6 +98,7 @@ const AppContent: React.FC = () => {
     Page.CASE_STUDY_WORDSPRINT,
     Page.CASE_STUDY_MICRO_GOLD,
     Page.GLASSCAPE_HORIZON,
+    Page.MONSOON_STORIES,
   ];
 
   const showNav = !hideNavPages.includes(currentPage);
@@ -122,6 +126,7 @@ const AppContent: React.FC = () => {
           {/* Main Pages */}
           <Route path="/consultancy" element={<Consultancy onNavigate={handleNavigate} />} />
           <Route path="/games" element={<Games onNavigate={handleNavigate} />} />
+          <Route path="/games/monsoon-stories" element={<MonsoonStories onNavigate={handleNavigate} />} />
           <Route path="/about" element={<About />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/journal/:slug" element={<JournalArticle />} />
