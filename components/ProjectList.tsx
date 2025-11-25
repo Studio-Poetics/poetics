@@ -46,7 +46,7 @@ const projects: Project[] = [
     category: 'Product Design',
     year: '2024',
     description: 'Holographic displays for the modern sanctuary. Building with the immaterial.',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=3', // REPLACE WITH REAL IMAGE
+    imageUrl: '/images/glasscape/Glasscape-1.png',
     targetPage: Page.GLASSCAPE
   },
   {
@@ -55,7 +55,7 @@ const projects: Project[] = [
     category: 'Anamorphic 3D Film',
     year: '2024',
     description: 'A 5-minute 3D anamorphic film for Science City Kolkata showcasing the history of the Indian Space Program.',
-    imageUrl: 'https://picsum.photos/600/800?grayscale&random=4', // REPLACE WITH REAL IMAGE
+    imageUrl: '/images/space/home-space.webp',
     targetPage: Page.CASE_STUDY_SPACE
   },
   {
@@ -64,7 +64,7 @@ const projects: Project[] = [
     category: 'Android Game Design',
     year: '2023',
     description: 'An Android vocabulary game where players practice language by unscrambling words and learning their meanings through interactive gameplay.',
-    imageUrl: 'https://picsum.photos/600/601?grayscale&random=5', // REPLACE WITH REAL IMAGE
+    imageUrl: '/images/wordsprint/wordsprint-game.webp',
     targetPage: Page.CASE_STUDY_WORDSPRINT
   },
   {
@@ -73,7 +73,7 @@ const projects: Project[] = [
     category: 'FinTech UX & Behavioral Design',
     year: '2023',
     description: "Designing culturally-sensitive saving habits for India's everyday investors. Transforming micro-investments into trust and long-term security.",
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=6', // REPLACE WITH REAL IMAGE
+    imageUrl: '/images/micro-savings/MICRO-SAVINGS.png',
     targetPage: Page.CASE_STUDY_MICRO_GOLD
   }
 ];

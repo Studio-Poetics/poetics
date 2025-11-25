@@ -81,12 +81,11 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                     {/* Product 01 - Horizon */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group cursor-pointer" onClick={() => onNavigate(Page.GLASSCAPE_HORIZON)}>
                         <div className="aspect-[4/5] bg-[#151515] relative overflow-hidden">
-                             {/* Mock Visual */}
                              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
                              <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                             <img 
-                                src="https://picsum.photos/800/1000?grayscale&blur=2" 
-                                alt="Glasscape Horizon" 
+                             <img
+                                src="/images/glasscape/Glasscape-1.png"
+                                alt="Glasscape Horizon"
                                 className="w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"
                             />
                         </div>
@@ -117,12 +116,11 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                     {/* Product 02 - Monolith */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
                         <div className="md:order-2 aspect-[4/5] bg-[#151515] relative overflow-hidden">
-                            {/* Mock Visual */}
                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
                              <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                             <img 
-                                src="https://picsum.photos/800/1001?grayscale&blur=2" 
-                                alt="Glasscape Monolith" 
+                             <img
+                                src="/images/glasscape/Glasscape-2.png"
+                                alt="Glasscape Monolith"
                                 className="w-full h-full object-cover opacity-40 mix-blend-overlay"
                             />
                         </div>
@@ -149,17 +147,11 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                     {/* Product 03 - CityScape */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
                         <div className="aspect-[16/9] md:aspect-[4/5] bg-[#151515] relative overflow-hidden">
-                             {/* Mock Visual */}
                              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
                              <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-emerald-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                             <div className="absolute inset-0 flex items-center justify-center">
-                                 {/* Abstract City Grid */}
-                                 <div className="w-full h-1/3 border-t border-b border-white/5 transform skew-x-12"></div>
-                                 <div className="absolute w-1/3 h-full border-l border-r border-white/5 transform -skew-x-12"></div>
-                             </div>
-                             <img 
-                                src="https://picsum.photos/1200/800?grayscale&blur=2" 
-                                alt="Glasscape CityScape" 
+                             <img
+                                src="/images/glasscape/Glasscape-aquarium.png"
+                                alt="Glasscape CityScape"
                                 className="w-full h-full object-cover opacity-40 mix-blend-overlay"
                             />
                         </div>
