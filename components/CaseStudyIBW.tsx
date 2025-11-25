@@ -98,7 +98,7 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                         muted
                         playsInline
                     >
-                        <source src="/images/ibw/logogram.mp4" type="video/mp4" />
+                        <source src="/wave.webm" type="video/webm" />
                         {/* Fallback for browsers that don't support video */}
                         <div className="w-full h-full flex items-center justify-center">
                             <span className="text-white font-mono text-xs">IBW Logogram</span>
