@@ -54,7 +54,7 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
         </div>
 
         {/* Progress Bar */}
-        <div className="fixed top-0 left-0 h-1 bg-[#FF9933] z-50 transition-all duration-100 ease-out" style={{ width: `${scrollProgress * 100}%` }} />
+        <div className="fixed top-0 left-0 h-1 bg-[#ffa232] z-50 transition-all duration-100 ease-out" style={{ width: `${scrollProgress * 100}%` }} />
 
 
         {/* ======================== HERO SECTION ======================== */}
@@ -69,7 +69,7 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                     <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-8">
                         INDIA<br/>
                         BLOCKCHAIN<br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9933] via-[#E01E5A] to-[#9B4DCA]">WEEK</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF42F] via-[#f450b2] to-[#3fcbff]">WEEK</span>
                     </h1>
                 </div>
 
@@ -87,29 +87,23 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                 </div>
             </div>
 
-            {/* Right: The Solar Mandala (CSS Art) */}
+            {/* Right: IBW Logogram Video */}
             <div className="w-full md:w-1/2 bg-[#111] relative flex items-center justify-center overflow-hidden min-h-[50vh] md:min-h-auto">
-                {/* Gradient Mesh Background */}
-                <div className="absolute inset-0 opacity-40" style={{
-                    background: 'radial-gradient(circle at 50% 50%, #9B4DCA 0%, #E01E5A 40%, #FF9933 100%)',
-                    filter: 'blur(60px)'
-                }}></div>
-
-                {/* Rotating Rings */}
-                <div className="relative w-[80%] aspect-square flex items-center justify-center">
-                    {/* Ring 1 */}
-                    <div className="absolute inset-0 border border-white/20 rounded-full animate-[spin_30s_linear_infinite]" />
-                    {/* Ring 2 */}
-                    <div className="absolute inset-[10%] border border-white/20 rounded-full animate-[spin_20s_linear_infinite_reverse]" 
-                         style={{ borderStyle: 'dashed' }} />
-                    {/* Ring 3 */}
-                    <div className="absolute inset-[20%] border border-white/20 rounded-full animate-[spin_15s_linear_infinite]" />
-                    
-                    {/* Center Core */}
-                    <div className="absolute w-32 h-32 bg-white rounded-full mix-blend-overlay blur-md animate-pulse" />
-                    <div className="absolute w-24 h-24 bg-black rounded-full border border-white/50 flex items-center justify-center z-10">
-                        <span className="text-white font-mono text-xs font-bold tracking-tighter">IBW</span>
-                    </div>
+                {/* Video Container */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                    <video
+                        className="w-[80%] aspect-square object-contain"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    >
+                        <source src="/images/ibw/logogram.mp4" type="video/mp4" />
+                        {/* Fallback for browsers that don't support video */}
+                        <div className="w-full h-full flex items-center justify-center">
+                            <span className="text-white font-mono text-xs">IBW Logogram</span>
+                        </div>
+                    </video>
                 </div>
 
                 {/* Texture Overlay */}
@@ -134,7 +128,7 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                         For <strong>India Blockchain Week</strong>, the organizers wanted something that felt authentically Indian—chaotic, vibrant, and warm—without resorting to kitsch or clichés. They needed a visual system that could hold the complexity of web3 protocols while inviting a diverse, global audience.
                     </p>
                     <p>
-                        Our solution was to bridge the gap between the ancient geometry of <span className="text-black font-medium border-b border-[#FF9933]">Mandalas</span> (recursive, centered systems) and the distributed nature of <span className="text-black font-medium border-b border-[#9B4DCA]">Blockchain Nodes</span>.
+                        Our solution was to bridge the gap between the ancient geometry of <span className="text-black font-medium border-b border-[#ffa232]">Mandalas</span> (recursive, centered systems) and the distributed nature of <span className="text-black font-medium border-b border-[#3fcbff]">Blockchain Nodes</span>.
                     </p>
                 </div>
             </div>
@@ -143,34 +137,34 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
         {/* ======================== SCALE OF EVENT ======================== */}
         <section className="bg-[#111] text-[#F4F4F0] border-b border-black">
              <div className="px-6 py-4 border-b border-white/20 flex justify-between items-center bg-[#1a1a1a]">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#FF9933]">01. Impact & Scale</span>
+                <span className="font-mono text-xs uppercase tracking-widest text-[#ffa232]">01. Impact & Scale</span>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y divide-white/10 border-b border-white/10">
                 {/* Metric 1 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
-                    <Users className="w-6 h-6 text-[#FF9933] mb-6 group-hover:scale-110 transition-transform" />
+                    <Users className="w-6 h-6 text-[#FFF42F] mb-6 group-hover:scale-110 transition-transform" />
                     <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">2000+</h3>
                     <p className="font-mono text-xs uppercase tracking-widest text-white/50">Attendees</p>
                 </div>
 
                 {/* Metric 2 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
-                    <Globe className="w-6 h-6 text-[#E01E5A] mb-6 group-hover:scale-110 transition-transform" />
+                    <Globe className="w-6 h-6 text-[#ffa232] mb-6 group-hover:scale-110 transition-transform" />
                     <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">50+</h3>
                     <p className="font-mono text-xs uppercase tracking-widest text-white/50">Countries</p>
                 </div>
 
                 {/* Metric 3 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
-                    <Layers className="w-6 h-6 text-[#9B4DCA] mb-6 group-hover:scale-110 transition-transform" />
+                    <Layers className="w-6 h-6 text-[#f450b2] mb-6 group-hover:scale-110 transition-transform" />
                     <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">125+</h3>
                     <p className="font-mono text-xs uppercase tracking-widest text-white/50">Side Events</p>
                 </div>
 
                 {/* Metric 4 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
-                    <Cpu className="w-6 h-6 text-[#FFD700] mb-6 group-hover:scale-110 transition-transform" />
+                    <Cpu className="w-6 h-6 text-[#3fcbff] mb-6 group-hover:scale-110 transition-transform" />
                     <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">7 Days</h3>
                     <p className="font-mono text-xs uppercase tracking-widest text-white/50">Of Innovation</p>
                 </div>
@@ -187,51 +181,63 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
             
             <div className="h-[60vh] flex flex-col md:flex-row w-full">
                 
-                {/* Color 1: Saffron */}
-                <div className="group relative flex-1 bg-[#FF9933] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
+                {/* Color 1: Bright Yellow */}
+                <div className="group relative flex-1 bg-[#FFF42F] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-black">
                         <span className="font-mono text-xs mb-2 block opacity-60">Primary</span>
                         <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Saffron
+                            Bright Yellow
                         </h3>
-                        <div className="font-mono text-xs bg-black text-white inline-block px-2 py-1">#FF9933</div>
+                        <div className="font-mono text-xs bg-black text-white inline-block px-2 py-1">#FFF42F</div>
                     </div>
                 </div>
 
-                {/* Color 2: Rani Pink */}
-                <div className="group relative flex-1 bg-[#E01E5A] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
+                {/* Color 2: Saffron Orange */}
+                <div className="group relative flex-1 bg-[#ffa232] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
+                    <div className="relative z-10 text-black">
+                        <span className="font-mono text-xs mb-2 block opacity-60">Secondary</span>
+                        <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
+                            Saffron Orange
+                        </h3>
+                        <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#ffa232</div>
+                    </div>
+                </div>
+
+                {/* Color 3: Magenta Pink */}
+                <div className="group relative flex-1 bg-[#f450b2] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-white">
                         <span className="font-mono text-xs mb-2 block opacity-60">Accent A</span>
                         <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Rani Pink
+                            Magenta Pink
                         </h3>
-                        <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#E01E5A</div>
+                        <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#f450b2</div>
                     </div>
                 </div>
 
-                {/* Color 3: Royal Purple */}
-                <div className="group relative flex-1 bg-[#9B4DCA] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
+                {/* Color 4: Cyan Blue */}
+                <div className="group relative flex-1 bg-[#3fcbff] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
-                    <div className="relative z-10 text-white">
+                    <div className="relative z-10 text-black">
                         <span className="font-mono text-xs mb-2 block opacity-60">Accent B</span>
                         <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Royal Purple
+                            Cyan Blue
                         </h3>
-                        <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#9B4DCA</div>
+                        <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#3fcbff</div>
                     </div>
                 </div>
 
-                {/* Color 4: Marigold */}
-                <div className="group relative flex-1 bg-[#FFD700] hover:flex-[3] transition-all duration-500 ease-out flex flex-col justify-end p-6 overflow-hidden">
+                {/* Color 5: Lime Green */}
+                <div className="group relative flex-1 bg-[#d0d81d] hover:flex-[3] transition-all duration-500 ease-out flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-black">
                         <span className="font-mono text-xs mb-2 block opacity-60">Highlight</span>
                         <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Marigold
+                            Lime Green
                         </h3>
-                        <div className="font-mono text-xs bg-black text-white inline-block px-2 py-1">#FFD700</div>
+                        <div className="font-mono text-xs bg-black text-white inline-block px-2 py-1">#d0d81d</div>
                     </div>
                 </div>
 

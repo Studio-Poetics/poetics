@@ -37,7 +37,7 @@ const projects: Project[] = [
     category: 'Workshop Design',
     year: '2024',
     description: 'Designing intuitive learning experiences for Reclaim Protocol. A conceptual scaffolding system for ZK Proofs.',
-    imageUrl: 'https://picsum.photos/600/600?grayscale&random=2', // REPLACE WITH REAL IMAGE
+    imageUrl: '/images/reclaim/hero_reclaim.webp',
     targetPage: Page.CASE_STUDY_RECLAIM
   },
   {
@@ -125,7 +125,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ onNavigate }) => {
                         <img
                             src={project.imageUrl}
                             alt={project.title}
-                            className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 grayscale group-hover:grayscale-0"
+                            className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-[#FF4400] mix-blend-multiply opacity-0 group-hover:opacity-10 transition-opacity duration-700" />
                         

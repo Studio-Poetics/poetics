@@ -1,14 +1,24 @@
-
-import React from 'react';
-import { ArrowLeft, ArrowRight, Download } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowLeft, Download } from 'lucide-react';
 import { Page } from '../types';
 import SEO from './SEO';
+import ImageModal from './ImageModal';
 
 interface CaseStudyProps {
     onNavigate: (page: Page) => void;
 }
 
 const CaseStudyReclaim: React.FC<CaseStudyProps> = ({ onNavigate }) => {
+    const [modalImageUrl, setModalImageUrl] = useState<string | null>(null);
+
+    const openModal = (imageUrl: string) => {
+        setModalImageUrl(imageUrl);
+    };
+
+    const closeModal = () => {
+        setModalImageUrl(null);
+    };
+
   return (
     <div className="min-h-screen bg-white">
         <SEO 
@@ -128,17 +138,17 @@ const CaseStudyReclaim: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                         A structured canvas guiding developers to map: Needs → Value → Claim → Hidden Data.
                     </p>
                     
-                    {/* ======================== WORKSHEET IMAGE PLACEHOLDER ======================== */}
-                    {/* Replace src with actual worksheet image */}
-                    <div className="aspect-video bg-[#E5E5E5] w-full relative overflow-hidden group cursor-pointer border border-black/10">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="font-mono text-xs uppercase tracking-widest text-black/40 bg-white px-3 py-1">[Placeholder: Blank Activity Worksheet Image]</span>
-                        </div>
+                    {/* ======================== WORKSHEET IMAGE  ======================== */}
+                    <div className="bg-white w-full relative group cursor-pointer border-2 border-dashed border-black/10 p-4" onClick={() => openModal('/images/reclaim/worksheet_blank.png')}>
                         <img 
-                            src="https://picsum.photos/800/600?grayscale&blur=2" 
+                            src="/images/reclaim/worksheet_blank.png"
                             alt="Activity Worksheet Blank" 
-                            className="w-full h-full object-cover opacity-20 hover:opacity-10 transition-opacity"
+                            className="w-full h-full object-contain"
                         />
+                        <a href="/images/reclaim/worksheet_blank.png" download onClick={(e) => e.stopPropagation()} className="absolute bottom-4 right-4 bg-black text-white font-mono text-xs px-4 py-2 rounded-full flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <Download className="w-3 h-3" />
+                            Download Worksheet
+                        </a>
                     </div>
                     {/* ========================================================================= */}
                 </div>
@@ -150,21 +160,15 @@ const CaseStudyReclaim: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                      {/* Artifact 1 */}
                      <div className="space-y-2">
-                        <div className="aspect-[4/3] bg-[#E5E5E5] w-full border border-black/10 relative">
-                             {/* EDIT IMAGE HERE */}
-                             <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="font-mono text-xs text-black/40">[Placeholder: Filled Worksheet Example 1]</span>
-                            </div>
+                        <div className="aspect-[4/3] bg-white w-full border border-black/10 relative cursor-pointer" onClick={() => openModal('/images/reclaim/worksheet_filled.webp')}>
+                             <img src="/images/reclaim/worksheet_filled.webp" alt="Filled Worksheet Example" className="w-full h-full object-cover" />
                         </div>
                         <p className="font-mono text-xs text-black/50">Scenario: Non-Profit & Donor Relationship</p>
                      </div>
                      {/* Artifact 2 */}
                      <div className="space-y-2">
-                        <div className="aspect-[4/3] bg-[#E5E5E5] w-full border border-black/10 relative">
-                             {/* EDIT IMAGE HERE */}
-                             <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="font-mono text-xs text-black/40">[Placeholder: Filled Worksheet Example 2]</span>
-                            </div>
+                        <div className="aspect-[4/3] bg-white w-full border border-black/10 relative cursor-pointer" onClick={() => openModal('/images/reclaim/worksheet_filled_2.jpg')}>
+                             <img src="/images/reclaim/worksheet_filled_2.jpg" alt="Filled Worksheet Example" className="w-full h-full object-cover" />
                         </div>
                          <p className="font-mono text-xs text-black/50">Scenario: Investor & Supernatural Research Institute</p>
                      </div>
@@ -174,7 +178,6 @@ const CaseStudyReclaim: React.FC<CaseStudyProps> = ({ onNavigate }) => {
             {/* Outcomes */}
             <div className="bg-[#111] text-[#F6F6F4] p-8 md:p-16 rounded-lg">
                 <h2 className="text-2xl font-light mb-6">Impact</h2>
-                {/* EDIT TEXT */}
                 <p className="text-white/80 leading-relaxed mb-6">
                     The activity set an energetic tone for the hackathon. By immediately diving into scenario creation supported by structured materials, we helped participants <strong>quickly grasp how Reclaim works</strong>.
                 </p>
@@ -195,6 +198,8 @@ const CaseStudyReclaim: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                 Let's simplify it.
             </button>
         </div>
+
+        <ImageModal isOpen={!!modalImageUrl} onClose={closeModal} imageUrl={modalImageUrl || ''} />
     </div>
   );
 };
