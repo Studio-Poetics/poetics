@@ -24,12 +24,12 @@ interface ProjectListProps {
 const projects: Project[] = [
   {
     id: '01',
-    title: 'India Blockchain Week',
-    category: 'Branding & Identity',
-    year: '2025',
-    description: 'A vibrant collision of heritage and future. Defining the visual language of India\'s web3 revolution with generative mandalas.',
-    imageUrl: '/images/ibw/Hero.webp',
-    targetPage: Page.CASE_STUDY_IBW
+    title: 'Glasscape Collection',
+    category: 'Product Design',
+    year: '2024',
+    description: 'Holographic displays for the modern sanctuary. Building with the immaterial.',
+    imageUrl: '/images/glasscape/Glasscape-1.png',
+    targetPage: Page.GLASSCAPE
   },
   {
     id: '02',
@@ -51,12 +51,12 @@ const projects: Project[] = [
   },
   {
     id: '04',
-    title: 'Glasscape Collection',
-    category: 'Product Design',
-    year: '2024',
-    description: 'Holographic displays for the modern sanctuary. Building with the immaterial.',
-    imageUrl: '/images/glasscape/Glasscape-1.png',
-    targetPage: Page.GLASSCAPE
+    title: 'India Blockchain Week',
+    category: 'Branding & Identity',
+    year: '2025',
+    description: 'A vibrant collision of heritage and future. Defining the visual language of India\'s web3 revolution with generative mandalas.',
+    imageUrl: '/images/ibw/Hero.webp',
+    targetPage: Page.CASE_STUDY_IBW
   },
   {
     id: '05',
