@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Poetics Studio</title>
+  <script>
+    // Store the path and redirect to index.html
+    // GitHub Pages will serve this 404.html for any non-existent path
+    // We capture the path and redirect to index.html with the path in sessionStorage
+    sessionStorage.setItem('redirectPath', window.location.pathname + window.location.search + window.location.hash);
+    window.location.replace('/');
+  </script>
+</head>
+<body>
+  <!-- This page will not be visible as the redirect happens immediately -->
+</body>
+</html>

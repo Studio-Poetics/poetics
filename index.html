@@ -104,6 +104,19 @@
   <body>
     <div id="root"></div>
     <div class="noise-overlay"></div>
+
+    <!-- SPA Redirect Handler for GitHub Pages -->
+    <script>
+      (function() {
+        var redirectPath = sessionStorage.getItem('redirectPath');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirectPath');
+          // Store it for React Router to pick up
+          window.__INITIAL_PATH__ = redirectPath;
+        }
+      })();
+    </script>
+
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>

@@ -62,6 +62,15 @@ const AppContent: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Handle redirect from 404.html (for direct URL access on GitHub Pages)
+  useEffect(() => {
+    const initialPath = (window as any).__INITIAL_PATH__;
+    if (initialPath && initialPath !== location.pathname) {
+      delete (window as any).__INITIAL_PATH__;
+      navigate(initialPath, { replace: true });
+    }
+  }, []);
+
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
