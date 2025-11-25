@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { ArrowLeft, ArrowUpRight, Copy, Users, Globe, Layers, Cpu } from 'lucide-react';
 import { Page } from '../types';
 import SEO from './SEO';
@@ -10,6 +10,7 @@ interface CaseStudyProps {
 
 const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,20 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleVideoEnd = () => {
+      setTimeout(() => {
+        video.play();
+      }, 5000); // 5 second pause
+    };
+
+    video.addEventListener('ended', handleVideoEnd);
+    return () => video.removeEventListener('ended', handleVideoEnd);
   }, []);
 
   return (
@@ -91,9 +106,9 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
             <div className="w-full md:w-1/2 bg-[#111] relative overflow-hidden min-h-[50vh] md:min-h-auto">
                 {/* Video - Full Cover */}
                 <video
+                    ref={videoRef}
                     className="absolute inset-0 w-full h-full object-cover"
                     autoPlay
-                    loop
                     muted
                     playsInline
                 >
