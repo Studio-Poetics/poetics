@@ -127,8 +127,18 @@ const About: React.FC = () => {
                         The Hoomans.
                     </h1>
                     <p className="text-xl md:text-2xl font-light leading-relaxed max-w-3xl text-black/70">
-                        Poetics is a collective of designers, technologists, and artists operating from the ancient city of Prayagraj and the coastal quiet of Goa. We are united by a desire to find the ghost in the machine.
-                    </p>
+    Poetics is a collective of designers, technologists, and artists operating from the ancient city of 
+    <a 
+        href="https://poetics.studio/journal/why-we-moved-to-prayagraj" 
+        target="_blank" 
+        rel="noreferrer" 
+        className="underline underline-offset-4 hover:text-[#FF4400] transition-colors"
+    >
+        Prayagraj
+    </a> 
+    and the coastal quiet of Goa. We are united by a desire to find the ghost in the machine.
+</p>
+
                 </header>
 
                 <div className="mb-8 font-mono text-xs uppercase tracking-widest text-black/40 border-b border-black/10 pb-2">
