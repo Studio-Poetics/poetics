@@ -225,38 +225,38 @@ export const articles: Article[] = [
         id: 4,
         slug: 'why-we-moved-to-prayagraj',
         title: "Why we moved to Prayagraj",
-        date: "Aug 15, 2024",
+        date: "Nov 25, 2025",
         tag: "Studio",
         content: (
             <>
                 <p className="text-xl md:text-2xl font-light leading-relaxed text-black/80 mb-12">
-                    People often ask why we chose Prayagraj. Not Bangalore. Not Mumbai. Not even Goa full-time. The answer isn't simple, but it's honest: we moved here because we needed to remember what stillness feels like.
+                    People often ask why we chose Prayagraj,  neither Delhi-Bangalore-Mumbai or even Goa full-time. The answer isn't simple, but it's honest: we moved here because we needed to remember what stillness feels like, and to reduce the cost of our overheads.
                 </p>
 
                 <p className="mb-16">
-                    In the relentless churn of metro cities, there's a kind of amnesia that sets in. You forget that thinking takes time. That ideas need silence to crystallize. That the best work often emerges not from hustle, but from attention—sustained, patient, unhurried attention.
+                    In the relentless race of metro cities, there's a kind of amnesia that sets in. You forget that thinking takes time. That boredom is required to focus. That the best work often emerges not from hustle, but from observations — sustained, patient, unhurried attention.
                 </p>
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Escaping the Echo Chamber</h2>
                 <p className="mb-8">
-                    Working in India's tech hubs felt increasingly like being trapped in an echo chamber. Everyone was building the same things, chasing the same metrics, speaking the same language of growth and scale. The conversations at coffee shops, co-working spaces, and networking events all began to blur into one continuous pitch deck.
+                    Working in India's tech hubs felt increasingly like being trapped in an echo chamber. Everyone was building the same things, chasing the same metrics, speaking the same language of growth and scale. The conversations at offices, gatherings, and networking events all began to blur into one continuous pitch deck.
                 </p>
 
                 <p className="mb-8">
-                    We found ourselves asking: what would it mean to build from a different vantage point? What ideas might emerge if we stepped outside the gravitational pull of startup culture?
+                    We found ourselves asking: what would it mean to build from a different vantage point? What ideas might emerge if we stepped outside the blackhole of startup culture?
                 </p>
 
                 <p className="mb-16">
-                    Prayagraj offered that distance. Not just physical distance, but conceptual space. Here, we're not surrounded by people optimizing for the same goals. We're not constantly comparing our trajectory to others'. We have room to think differently.
+                    Prayagraj offered that distance. Not just physical distance, but conceptual space. Here, we're not surrounded by people optimizing for the same goals. We're not constantly comparing our journey to others'. We have room to think differently.
                 </p>
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">The Economics of Attention</h2>
                 <p className="mb-8">
-                    There's also a pragmatic truth: the cost of living in Bangalore or Mumbai makes certain kinds of work impossible. When your overhead is high, you're forced to chase projects that pay quickly rather than projects that matter deeply.
+                    There's also another truth: the cost of living in Bangalore/Mumbai/Delhi makes certain kinds of work impossible. When your overhead is high, you're forced to chase projects that pay quickly rather than projects that matter deeply.
                 </p>
 
                 <p className="mb-8">
-                    In Prayagraj, our studio rent costs less than a single client dinner in South Mumbai. This economic breathing room allows us to say no to work that doesn't align with our values. It lets us invest time in R&D, in experiments, in essays like this one.
+                    In Prayagraj, our studio rent costs less than a single client dinner in South Mumbai.We have a full floor to ourselves in our house built by my father. This economic breathing room, this privillege, allows us to say no to work that doesn't align with our values. It lets us invest time in R&D, in experiments, in essays like this one.
                 </p>
 
                 <p className="mb-16">
@@ -265,28 +265,29 @@ export const articles: Article[] = [
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Connection to Context</h2>
                 <p className="mb-8">
-                    There's something profound about working in a place with deep historical memory. Prayagraj has been a confluence—literally and metaphorically—for thousands of years. Ideas, traditions, and people have always flowed through here.
+                    There's something profound about working in a place with deep historical memory. Prayagraj has been a confluence for thousands of years. Ideas, traditions, and people have always flowed through here.
                 </p>
 
                 <p className="mb-8">
-                    When we design here, we're reminded that we're not building in a vacuum. We're building in a country with complex traditions around craftsmanship, community, and contemplation. These aren't aesthetic inspirations to appropriate—they're living contexts to learn from.
+                    When we design here, we're reminded that we're not building in a vacuum. We're building in a country with complex traditions around craftsmanship, community, and rituals. These aren't aesthetic inspirations to appropriate — they're living contexts and rituals to learn from.
                 </p>
 
                 <p className="mb-16">
-                    Being here keeps us honest. It reminds us that technology doesn't exist in the abstract. It lands somewhere. It affects someone. And those someones deserve our attention.
+                    Being here keeps us relaxed. It reminds us that technology doesn't exist in the abstract. It lands somewhere. It affects someone. And those someones deserve our attention. And above all by staying close to our family it helps us answer "why we work so hard?".
                 </p>
 
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Slowness as Strategy</h2>
+                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Happiness as Strategy</h2>
                 <p className="mb-8">
-                    Perhaps the most important reason we're here: we needed to learn to work slowly again. Not inefficiently, but deliberately. Not procrastinating, but processing.
+                    Perhaps the most important reason we're here: we needed to learn that our work is just work its not the only thing in our lives. The rush to become someone and something as quickly as possible is so strong in this world that often th ejoy of making is left out, and thats when mediocrity and dishonest work creeps in. 
+                    We have the privillege to continue to work without the greed to be someone other than ourselves. 
                 </p>
 
                 <p className="mb-8">
-                    In the startup ecosystem, slowness is treated as failure. But some of our best work has emerged from long, meandering conversations. From sitting with a problem for weeks instead of hours. From letting ideas settle before rushing to execution.
+                    In the startup ecosystem, resting is treated as task. Rest is a planned activity for which you need pers=mission from your bosses and investors. We believe that rest is integral and rest can also lead to work being done. Some of our best work has emerged from long, meandering conversations. From sitting with a problem for weeks instead of hours. From letting ideas settle before rushing to execution.
                 </p>
 
                 <p className="mb-12">
-                    Prayagraj gives us permission for that pace. The city itself moves differently—not sluggishly, but with a kind of unhurried confidence. It's teaching us that urgency and importance aren't the same thing.
+                    Prayagraj gives us permission for that pace. The city itself moves differently — not sluggishly, but with a kind of unhurried confidence. It's teaching us that urgency and importance aren't the same thing.
                 </p>
 
                 <p className="text-sm text-black/50 italic mt-16 border-t border-black/10 pt-8">
