@@ -230,11 +230,11 @@ export const articles: Article[] = [
         content: (
             <>
                 <p className="text-xl md:text-2xl font-light leading-relaxed text-black/80 mb-12">
-                    People often ask why we chose Prayagraj,  neither Delhi-Bangalore-Mumbai or even Goa full-time. The answer isn't simple, but it's honest: we moved here because we needed to remember what stillness feels like, and to reduce the cost of our overheads.
+                    People often ask why we chose Prayagraj,  rather than living full-time in cities like Delhi, Bangalore, or Mumbai, or even Goa full-time. The answer isn't simple, but it's honest: we moved here because we needed to remember what stillness feels like, and to reduce the cost of our overheads.
                 </p>
 
                 <p className="mb-16">
-                    In the relentless race of metro cities, there's a kind of amnesia that sets in. You forget that thinking takes time. That boredom is required to focus. That the best work often emerges not from hustle, but from observations — sustained, patient, unhurried attention.
+                    In the race of metro cities, there's a kind of amnesia that sets in. You forget that thinking takes time. That boredom is required to focus. That the best work often emerges not from hustle, but from observations — sustained, patient, unhurried attention.
                 </p>
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Escaping the Echo Chamber</h2>
@@ -252,7 +252,7 @@ export const articles: Article[] = [
 
                 <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">The Economics of Attention</h2>
                 <p className="mb-8">
-                    There's also another truth: the cost of living in Bangalore/Mumbai/Delhi makes certain kinds of work impossible. When your overhead is high, you're forced to chase projects that pay quickly rather than projects that matter deeply.
+                    There's also another truth: the cost of living in Bangalore/Mumbai/Delhi makes certain kinds of work impossible. When your operating costs is high, you're forced to take projects that pay quickly rather than projects that matter the most.
                 </p>
 
                 <p className="mb-8">
