@@ -179,62 +179,42 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
             
             <div className="h-[60vh] flex flex-col md:flex-row w-full">
                 
-                {/* Color 1: Bright Yellow */}
+                {/* Color 1 */}
                 <div className="group relative flex-1 bg-[#FFF42F] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-black">
-                        <span className="font-mono text-xs mb-2 block opacity-60">Primary</span>
-                        <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Bright Yellow
-                        </h3>
                         <div className="font-mono text-xs bg-black text-white inline-block px-2 py-1">#FFF42F</div>
                     </div>
                 </div>
 
-                {/* Color 2: Saffron Orange */}
+                {/* Color 2 */}
                 <div className="group relative flex-1 bg-[#ffa232] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-black">
-                        <span className="font-mono text-xs mb-2 block opacity-60">Secondary</span>
-                        <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Saffron Orange
-                        </h3>
                         <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#ffa232</div>
                     </div>
                 </div>
 
-                {/* Color 3: Magenta Pink */}
+                {/* Color 3 */}
                 <div className="group relative flex-1 bg-[#f450b2] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-white">
-                        <span className="font-mono text-xs mb-2 block opacity-60">Accent A</span>
-                        <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Magenta Pink
-                        </h3>
                         <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#f450b2</div>
                     </div>
                 </div>
 
-                {/* Color 4: Cyan Blue */}
+                {/* Color 4 */}
                 <div className="group relative flex-1 bg-[#3fcbff] hover:flex-[3] transition-all duration-500 ease-out border-b md:border-b-0 md:border-r border-black flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-black">
-                        <span className="font-mono text-xs mb-2 block opacity-60">Accent B</span>
-                        <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Cyan Blue
-                        </h3>
                         <div className="font-mono text-xs bg-white text-black inline-block px-2 py-1">#3fcbff</div>
                     </div>
                 </div>
 
-                {/* Color 5: Lime Green */}
+                {/* Color 5 */}
                 <div className="group relative flex-1 bg-[#d0d81d] hover:flex-[3] transition-all duration-500 ease-out flex flex-col justify-end p-6 overflow-hidden">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] transition-opacity" />
                     <div className="relative z-10 text-black">
-                        <span className="font-mono text-xs mb-2 block opacity-60">Highlight</span>
-                        <h3 className="text-4xl font-bold tracking-tighter mb-2 transform md:-translate-x-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
-                            Lime Green
-                        </h3>
                         <div className="font-mono text-xs bg-black text-white inline-block px-2 py-1">#d0d81d</div>
                     </div>
                 </div>
