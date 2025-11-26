@@ -97,11 +97,11 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                             <div className="grid grid-cols-2 gap-8 text-xs font-mono text-white/40 uppercase tracking-widest border-t border-white/10 pt-8 mb-8">
                                 <div>
                                     <span className="block text-white/20 mb-1">Dimensions</span>
-                                    200 x 200 x 300mm
+                                    560 x 410 x 120mm
                                 </div>
                                 <div>
                                     <span className="block text-white/20 mb-1">Materials</span>
-                                    Glass / Walnut / Al
+                                    White Ash / Teak / MS
                                 </div>
                             </div>
 
@@ -130,11 +130,11 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                             <div className="grid grid-cols-2 gap-8 text-xs font-mono text-white/40 uppercase tracking-widest border-t border-white/10 pt-8">
                                 <div>
                                     <span className="block text-white/20 mb-1">Dimensions</span>
-                                    400 x 400 x 1800mm
+                                    710 x 450 x 120mm
                                 </div>
                                 <div>
                                     <span className="block text-white/20 mb-1">Materials</span>
-                                    Black Steel / Gorilla Glass
+                                    Black Steel / Teak / Recycled Materials
                                 </div>
                             </div>
                         </div>
