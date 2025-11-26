@@ -270,10 +270,10 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                 href="mailto:glasscape@poetics.studio?subject=Inquiry: Horizon"
                 className="inline-block border-b border-white/30 pb-1 text-xl text-white hover:text-[#FF4400] hover:border-[#FF4400] transition-colors"
             >
-                glasscape@poetics.studio
+                pranshu@poetics.studio
             </a>
             <p className="text-xs font-mono text-white/50 mt-8 uppercase tracking-widest">
-                Ships Q2 2025 • Made to Order in Goa, India
+                Ships in 4 weeks • Made to Order in Goa, India
             </p>
         </section>
 
