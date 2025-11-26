@@ -53,7 +53,7 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                     Horizon
                 </h1>
                 <p className="text-xl md:text-2xl font-light text-white/70 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-                    A compact holographic display built on teak or painted-wood base.<br/>
+                    A compact holographic display built on teak or paint on wood base.<br/>
                     Designed for desks and bedside spaces.
                 </p>
             </div>
@@ -73,10 +73,10 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                 </div>
                 <div>
                     <p className="text-white/60 text-lg leading-relaxed mb-8">
-                        Horizon sits quietly in your space—a block of glass and wood—only manifesting information when it is poetic or necessary.
+                        Horizon sits quietly in your space—a minimal holographic display on wood—only manifesting information when it is poetic or necessary.
                     </p>
                     <p className="text-white/60 text-lg leading-relaxed">
-                        It can show circadian light patterns, local weather, or quiet ambient visuals. When silent, it dissolves into clear glass and premium wood, respecting the integrity of your interior.
+                        It can show circadian light patterns, local weather, or quiet ambient visuals. When silent, it fades to black, respecting the integrity of your interior.
                     </p>
                 </div>
             </div>
@@ -96,7 +96,7 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                             <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-4 block">01</span>
                             <h3 className="text-3xl font-light mb-4 text-white">Horizon / Teak</h3>
                             <p className="text-white/50 leading-relaxed">
-                                Natural solid teak base with warm grain. Low-iron crystal glass prism. Handcrafted brass details.
+                                Natural solid teak base with warm grain. Premium holographic display. Handcrafted brass details.
                             </p>
                         </div>
                     </div>
@@ -176,36 +176,28 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
             <h2 className="text-3xl font-light mb-16 text-white">Specifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                 <div className="border-b border-white/10 pb-6">
-                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Dimensions</div>
-                    <div className="text-2xl font-light text-white">200 × 200 × 300mm</div>
+                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Dimensions (Small)</div>
+                    <div className="text-2xl font-light text-white">560 × 410 × 120mm</div>
                 </div>
                 <div className="border-b border-white/10 pb-6">
-                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Weight</div>
-                    <div className="text-2xl font-light text-white">3.2 kg</div>
+                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Dimensions (Large)</div>
+                    <div className="text-2xl font-light text-white">710 × 470 × 120mm</div>
                 </div>
                 <div className="border-b border-white/10 pb-6">
                     <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Base Material</div>
-                    <div className="text-2xl font-light text-white">Solid Teak / Painted Wood</div>
-                </div>
-                <div className="border-b border-white/10 pb-6">
-                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Glass</div>
-                    <div className="text-2xl font-light text-white">Low-Iron Crystal</div>
+                    <div className="text-2xl font-light text-white">Solid Teak / Paint on Wood</div>
                 </div>
                 <div className="border-b border-white/10 pb-6">
                     <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Display Resolution</div>
-                    <div className="text-2xl font-light text-white">4M Voxels</div>
-                </div>
-                <div className="border-b border-white/10 pb-6">
-                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Brightness</div>
-                    <div className="text-2xl font-light text-white">1500 nits</div>
+                    <div className="text-2xl font-light text-white">Full HD</div>
                 </div>
                 <div className="border-b border-white/10 pb-6">
                     <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Connectivity</div>
                     <div className="text-2xl font-light text-white">USB-C / WiFi 6</div>
                 </div>
                 <div className="border-b border-white/10 pb-6">
-                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Power</div>
-                    <div className="text-2xl font-light text-white">45W Maximum</div>
+                    <div className="font-mono text-xs uppercase tracking-widest text-white/40 mb-3">Power Consumption</div>
+                    <div className="text-2xl font-light text-white">15-45W (65W adapter)</div>
                 </div>
             </div>
         </section>
@@ -254,8 +246,8 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                         <p className="text-sm text-black/60 leading-relaxed">Hand-selected teak from sustainable forests. Each grain pattern is unique.</p>
                     </div>
                     <div className="p-8 border border-black/10">
-                        <h4 className="font-mono text-xs uppercase tracking-widest mb-2 text-black/40">Optical Precision</h4>
-                        <p className="text-sm text-black/60 leading-relaxed">Low-iron crystal glass with &lt;0.01% distortion tolerance.</p>
+                        <h4 className="font-mono text-xs uppercase tracking-widest mb-2 text-black/40">Display Calibration</h4>
+                        <p className="text-sm text-black/60 leading-relaxed">Full HD holographic display individually calibrated for color accuracy.</p>
                     </div>
                     <div className="p-8 border border-black/10">
                         <h4 className="font-mono text-xs uppercase tracking-widest mb-2 text-black/40">Quality Control</h4>
