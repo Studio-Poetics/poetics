@@ -91,7 +91,7 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                             <span className="font-mono text-xs text-[#FF4400] mb-4 block">Desktop Model</span>
                             <h3 className="text-4xl md:text-5xl font-light mb-6 group-hover:text-white/90 transition-colors">Horizon</h3>
                             <p className="text-white/50 leading-relaxed mb-8">
-                                A minimal glass prism grounded in a solid walnut or brushed aluminium base. Perfect for executive desks and bedside environments. Displays circadian rhythms, weather, or purely generative art.
+                                A compact Glasscape collection built on a teak or painted-wood base. Designed for desks and bedside spaces. It can show circadian light patterns, local weather, or quiet ambient visuals.
                             </p>
                             
                             <div className="grid grid-cols-2 gap-8 text-xs font-mono text-white/40 uppercase tracking-widest border-t border-white/10 pt-8 mb-8">
@@ -140,7 +140,8 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                         </div>
                     </div>
 
-                    {/* Product 03 - CityScape */}
+                    {/* Product 03 - CityScape - HIDDEN FOR NOW */}
+                    {false && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center group">
                         <div className="aspect-[16/9] md:aspect-[4/5] bg-[#151515] relative overflow-hidden">
                              <img
@@ -153,9 +154,9 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                             <span className="font-mono text-xs text-[#FF4400] mb-4 block">Urban Installation</span>
                             <h3 className="text-4xl md:text-5xl font-light mb-6">CityScape</h3>
                             <p className="text-white/50 leading-relaxed mb-8">
-                                A massive, modular holographic field designed for public squares and smart city control centers. CityScape visualizes urban pulse data—traffic, weather, energy—in real-time, creating a breathing digital twin of the metropolis.
+                                A modular collection for cities. It displays real-time urban data—traffic, weather, energy use—and turns it into a clear, living snapshot of the city.
                             </p>
-                            
+
                             <div className="grid grid-cols-2 gap-8 text-xs font-mono text-white/40 uppercase tracking-widest border-t border-white/10 pt-8">
                                 <div>
                                     <span className="block text-white/20 mb-1">Dimensions</span>
@@ -168,6 +169,7 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                             </div>
                         </div>
                     </div>
+                    )}
 
                 </div>
             </div>

@@ -10,16 +10,15 @@ interface GlasscapeHorizonProps {
 
 const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
   return (
-    <div className="min-h-screen bg-[#F6F6F4] text-[#111]">
-         <SEO 
+    <div className="min-h-screen bg-[#0A0A0A] text-[#F6F6F4]">
+         <SEO
             title="Horizon - Glasscape Collection"
-            description="Glasscape Horizon: A desktop holographic display for executive environments. Walnut base, tempered glass, generative art integration."
-            keywords={['Glasscape Horizon', 'Desktop Hologram', 'Executive Tech', 'Luxury Desk Accessories', 'Generative Art Display']}
+            description="Glasscape Horizon: A compact desktop holographic display built on teak or painted-wood base. Designed for desks and bedside spaces with circadian light patterns and ambient visuals."
+            keywords={['Glasscape Horizon', 'Desktop Hologram', 'Executive Tech', 'Luxury Desk Accessories', 'Generative Art Display', 'Ambient Light Display']}
             schema={{
                 "@type": "Product",
                 "name": "Glasscape Horizon",
                 "category": "Technology/Decor",
-                "image": "https://poetics.studio/horizon-product.jpg",
                 "brand": { "@type": "Brand", "name": "Poetics Studio" },
                 "offers": {
                     "@type": "Offer",
@@ -30,147 +29,263 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
         />
 
         {/* Navigation */}
-        <nav className="fixed top-0 left-0 w-full z-40 px-6 py-6 flex justify-between items-center mix-blend-difference text-white">
-            <button 
+        <nav className="fixed top-0 left-0 w-full z-40 px-6 md:px-12 py-8 flex justify-between items-center">
+            <button
                 onClick={() => onNavigate(Page.GLASSCAPE)}
-                className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest hover:opacity-70 transition-opacity"
+                className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors"
             >
-                <ArrowLeft className="w-4 h-4" /> Back to Collection
+                <ArrowLeft className="w-3 h-3" /> Collection
             </button>
-            <span className="font-mono text-xs uppercase tracking-widest">Glasscape / Series 01</span>
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">Series 01</span>
         </nav>
 
-        {/* Hero Product Shot */}
-        <div className="h-screen w-full relative flex flex-col justify-end pb-24 px-6 md:px-12 bg-[#E5E5E5] overflow-hidden">
-             {/* Mock Product Image */}
-             <div className="absolute inset-0">
-                <img 
-                    src="https://picsum.photos/1600/1200?grayscale&blur=1" 
-                    alt="Horizon Product Context" 
-                    className="w-full h-full object-cover opacity-80"
+        {/* Hero - Cinematic Product Shot */}
+        <div className="h-screen w-full relative flex items-center justify-center overflow-hidden">
+             {/* Ambient Background Gradient */}
+             <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#1A1A2E] to-[#0A0A0A]" />
+
+             {/* Atmospheric Glow */}
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-500/10 via-cyan-500/5 to-transparent rounded-full blur-3xl" />
+
+             {/* Hero Image */}
+             <div className="relative z-10 w-full max-w-5xl px-6">
+                <img
+                    src="/images/glasscape/Glasscape-1.png"
+                    alt="Glasscape Horizon"
+                    className="w-full h-auto drop-shadow-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
              </div>
 
-             <div className="relative z-10 text-white max-w-4xl">
-                <h1 className="text-6xl md:text-8xl font-light tracking-tighter mb-4">Horizon.</h1>
-                <p className="text-xl md:text-2xl font-light text-white/80 max-w-xl">
-                    A desktop sanctuary. The Horizon model brings the ambient intelligence of Glasscape to your personal workspace.
-                </p>
+             {/* Floating Title */}
+             <div className="absolute bottom-24 left-6 md:left-12 z-20">
+                <h1 className="text-6xl md:text-9xl font-light tracking-tighter text-white/90">Horizon</h1>
+                <p className="text-sm md:text-base font-mono uppercase tracking-[0.3em] text-white/40 mt-4">Desktop Collection</p>
              </div>
         </div>
 
         {/* Introduction */}
-        <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto">
-             <div className="flex flex-col md:flex-row gap-12 items-baseline border-b border-black/10 pb-12 mb-12">
-                <h2 className="text-2xl font-light whitespace-nowrap">The Concept</h2>
-                <p className="text-lg font-light leading-relaxed text-black/70">
-                    We designed Horizon to be a "calm technology". In an era of aggressive notifications and bright screens, Horizon is passive. It sits quietly on your desk, a block of pristine glass and wood, only manifesting information when it is poetic or necessary.
-                </p>
-             </div>
-             
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                 <div>
-                     <h4 className="font-mono text-xs uppercase tracking-widest text-black/40 mb-2">Base Material</h4>
-                     <p>American Walnut</p>
-                 </div>
-                 <div>
-                     <h4 className="font-mono text-xs uppercase tracking-widest text-black/40 mb-2">Glass Type</h4>
-                     <p>Low-Iron Crystal</p>
-                 </div>
-                 <div>
-                     <h4 className="font-mono text-xs uppercase tracking-widest text-black/40 mb-2">Input</h4>
-                     <p>USB-C / WiFi 6</p>
-                 </div>
-                 <div>
-                     <h4 className="font-mono text-xs uppercase tracking-widest text-black/40 mb-2">Edition</h4>
-                     <p>Made to Order</p>
-                 </div>
+        <section className="py-32 px-6 md:px-12 border-t border-white/5">
+             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-6 block">Philosophy</span>
+                    <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
+                        Calm technology<br/>for focused minds.
+                    </h2>
+                </div>
+                <div className="flex flex-col justify-end">
+                    <p className="text-lg leading-relaxed text-white/60 mb-6">
+                        A compact Glasscape collection built on a teak or painted-wood base. Designed for desks and bedside spaces. It can show circadian light patterns, local weather, or quiet ambient visuals.
+                    </p>
+                    <p className="text-lg leading-relaxed text-white/60">
+                        Horizon sits quietly in your space—a block of glass and wood—only manifesting information when it is poetic or necessary.
+                    </p>
+                </div>
              </div>
         </section>
 
-        {/* Features Gallery */}
-        <section className="bg-white py-24 px-6 md:px-12">
+        {/* Visual Gallery */}
+        <section className="py-24 px-6 md:px-12 bg-[#050505]">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="aspect-square bg-[#F0F0EE] p-12 flex flex-col justify-between">
-                        <h3 className="text-3xl font-light">Generative Clock</h3>
-                        <p className="text-black/60">Time represented not by numbers, but by the position of a digital sun or the bloom of a procedural flower.</p>
-                        <div className="w-12 h-12 border border-black/10 rounded-full"></div>
+                    {/* Image 1 - Full bleed */}
+                    <div className="aspect-square overflow-hidden bg-[#111]">
+                        <img
+                            src="/images/glasscape/Glasscape-2.png"
+                            alt="Horizon Detail"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
-                    <div className="aspect-square bg-[#111] text-white p-12 flex flex-col justify-between">
-                        <h3 className="text-3xl font-light">Market Pulse</h3>
-                        <p className="text-white/60">Visualize your portfolio or crypto assets as a topographic landscape that shifts with market volatility.</p>
-                        <div className="w-12 h-12 border border-white/10 rounded-full"></div>
+
+                    {/* Text Block */}
+                    <div className="aspect-square bg-gradient-to-br from-[#1A1A2E] to-[#0A0A0A] p-12 md:p-16 flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-3xl md:text-4xl font-light leading-tight mb-6">
+                                Tangible light as<br/>a building material.
+                            </h3>
+                            <p className="text-white/50 leading-relaxed">
+                                When active, Horizon holds presence. When silent, it dissolves into clear glass and premium wood, respecting the integrity of your interior.
+                            </p>
+                        </div>
+                        <div className="w-16 h-[1px] bg-gradient-to-r from-white/20 to-transparent" />
                     </div>
-                    <div className="md:col-span-2 aspect-[2/1] bg-[#E5E5E5] relative overflow-hidden">
-                        <img src="https://picsum.photos/1200/600?grayscale" alt="Detail Shot" className="w-full h-full object-cover" />
-                        <div className="absolute bottom-12 left-12">
-                            <h3 className="text-3xl font-light text-white drop-shadow-md">Material Honesty</h3>
+
+                    {/* Image 2 - Wide */}
+                    <div className="md:col-span-2 aspect-[21/9] overflow-hidden bg-[#111]">
+                        <img
+                            src="/images/glasscape/Glasscape-wall-frame.png"
+                            alt="Horizon in Context"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
+
+                    {/* Specs Grid */}
+                    <div className="aspect-square bg-white text-black p-12 md:p-16 flex flex-col justify-between">
+                        <div>
+                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-black/30 mb-8 block">Specifications</span>
+                            <div className="space-y-6">
+                                <div className="border-b border-black/10 pb-4">
+                                    <div className="font-mono text-xs uppercase tracking-widest text-black/40 mb-1">Dimensions</div>
+                                    <div className="text-lg">200 × 200 × 300mm</div>
+                                </div>
+                                <div className="border-b border-black/10 pb-4">
+                                    <div className="font-mono text-xs uppercase tracking-widest text-black/40 mb-1">Base Material</div>
+                                    <div className="text-lg">Teak / Painted Wood</div>
+                                </div>
+                                <div className="border-b border-black/10 pb-4">
+                                    <div className="font-mono text-xs uppercase tracking-widest text-black/40 mb-1">Glass Type</div>
+                                    <div className="text-lg">Low-Iron Crystal</div>
+                                </div>
+                                <div className="pb-4">
+                                    <div className="font-mono text-xs uppercase tracking-widest text-black/40 mb-1">Power</div>
+                                    <div className="text-lg">USB-C / WiFi 6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Image 3 */}
+                    <div className="aspect-square overflow-hidden bg-[#111]">
+                        <img
+                            src="/images/glasscape/Glasscape-aquarium.png"
+                            alt="Horizon Ambient Display"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-32 px-6 md:px-12 border-t border-white/5">
+            <div className="max-w-4xl mx-auto">
+                <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-12 block">What it displays</span>
+
+                <div className="space-y-12">
+                    <div className="border-b border-white/5 pb-12">
+                        <h3 className="text-2xl md:text-3xl font-light mb-4">Circadian Light Patterns</h3>
+                        <p className="text-white/50 leading-relaxed max-w-2xl">
+                            Soft gradients that shift throughout the day, mimicking natural sunlight—warm amber in the morning, cool blue at midday, deep orange at dusk.
+                        </p>
+                    </div>
+
+                    <div className="border-b border-white/5 pb-12">
+                        <h3 className="text-2xl md:text-3xl font-light mb-4">Local Weather</h3>
+                        <p className="text-white/50 leading-relaxed max-w-2xl">
+                            Abstract visualizations of your local climate—floating particles for rain, gentle waves for wind, soft pulses for temperature changes.
+                        </p>
+                    </div>
+
+                    <div className="border-b border-white/5 pb-12">
+                        <h3 className="text-2xl md:text-3xl font-light mb-4">Generative Art</h3>
+                        <p className="text-white/50 leading-relaxed max-w-2xl">
+                            Procedural visuals that never repeat—minimal geometric forms, organic growth patterns, or quiet meditative animations.
+                        </p>
+                    </div>
+
+                    <div className="pb-12">
+                        <h3 className="text-2xl md:text-3xl font-light mb-4">Custom Integrations</h3>
+                        <p className="text-white/50 leading-relaxed max-w-2xl">
+                            Connect to your calendar, meditation timer, or studio lighting for seamless ambient presence that adapts to your workflow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Technical Specifications */}
+        <section className="py-24 px-6 md:px-12 bg-[#050505]">
+            <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-light mb-16">Technical Details</h2>
+
+                <div className="space-y-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12 border-b border-white/5">
+                        <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/30">Hardware</div>
+                        <div className="md:col-span-2 space-y-4 text-sm">
+                            <div className="flex justify-between border-b border-white/5 pb-3">
+                                <span className="text-white/50">Display Volume</span>
+                                <span className="text-white/90">200mm × 200mm × 200mm</span>
+                            </div>
+                            <div className="flex justify-between border-b border-white/5 pb-3">
+                                <span className="text-white/50">Resolution</span>
+                                <span className="text-white/90">4M Voxels</span>
+                            </div>
+                            <div className="flex justify-between border-b border-white/5 pb-3">
+                                <span className="text-white/50">Brightness</span>
+                                <span className="text-white/90">1500 nits (Daylight Visible)</span>
+                            </div>
+                            <div className="flex justify-between pb-3">
+                                <span className="text-white/50">Processor</span>
+                                <span className="text-white/90">ARM64 Neural Chip</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12 border-b border-white/5">
+                        <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/30">Software</div>
+                        <div className="md:col-span-2 space-y-4 text-sm">
+                            <div className="flex justify-between border-b border-white/5 pb-3">
+                                <span className="text-white/50">Operating System</span>
+                                <span className="text-white/90">GlassOS 2.0</span>
+                            </div>
+                            <div className="flex justify-between border-b border-white/5 pb-3">
+                                <span className="text-white/50">Compatibility</span>
+                                <span className="text-white/90">iOS / Android / Mac / Windows</span>
+                            </div>
+                            <div className="flex justify-between pb-3">
+                                <span className="text-white/50">Updates</span>
+                                <span className="text-white/90">OTA Forever</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="font-mono text-xs uppercase tracking-[0.3em] text-white/30">In the Box</div>
+                        <div className="md:col-span-2 space-y-3 text-sm text-white/70">
+                            <div className="flex items-center gap-3">
+                                <Check className="w-4 h-4 text-white/40" />
+                                <span>1× Horizon Unit</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Check className="w-4 h-4 text-white/40" />
+                                <span>1× Braided USB-C Power Cable (3m)</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Check className="w-4 h-4 text-white/40" />
+                                <span>1× Microfiber Polishing Cloth</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <Check className="w-4 h-4 text-white/40" />
+                                <span>1× Authenticity Certificate</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* Specifications */}
-        <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-light mb-12">Specifications</h2>
-            <div className="border-t border-black/10">
-                <div className="grid grid-cols-1 md:grid-cols-3 py-6 border-b border-black/10">
-                    <div className="font-mono text-xs uppercase tracking-widest text-black/40">Hardware</div>
-                    <div className="md:col-span-2 text-sm space-y-2">
-                        <div className="flex justify-between"><span>Display Volume</span> <span>200mm x 200mm x 200mm</span></div>
-                        <div className="flex justify-between"><span>Resolution</span> <span>4 Million Voxels</span></div>
-                        <div className="flex justify-between"><span>Brightness</span> <span>1500 nits (Daylight Visible)</span></div>
-                        <div className="flex justify-between"><span>Processor</span> <span>Custom ARM64 Neural Chip</span></div>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 py-6 border-b border-black/10">
-                    <div className="font-mono text-xs uppercase tracking-widest text-black/40">Software</div>
-                    <div className="md:col-span-2 text-sm space-y-2">
-                        <div className="flex justify-between"><span>OS</span> <span>GlassOS 2.0</span></div>
-                        <div className="flex justify-between"><span>Compatibility</span> <span>iOS / Android / Mac / Windows</span></div>
-                        <div className="flex justify-between"><span>Updates</span> <span>OTA Forever</span></div>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 py-6 border-b border-black/10">
-                    <div className="font-mono text-xs uppercase tracking-widest text-black/40">In the Box</div>
-                    <div className="md:col-span-2 text-sm space-y-2">
-                        <p>1x Horizon Unit</p>
-                        <p>1x Braided USB-C Power Cable (3m)</p>
-                        <p>1x Microfiber Polishing Cloth</p>
-                        <p>1x Authenticity Certificate (NFT)</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div className="mt-12 flex gap-4">
-                 <button className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest border border-black/10 px-6 py-3 hover:bg-black hover:text-white transition-colors">
-                    <Download className="w-4 h-4" /> Spec Sheet (PDF)
-                 </button>
-                 <button className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest border border-black/10 px-6 py-3 hover:bg-black hover:text-white transition-colors">
-                    <Download className="w-4 h-4" /> 3D Model (.obj)
-                 </button>
-            </div>
-        </section>
+        {/* CTA */}
+        <section className="py-32 px-6 md:px-12 border-t border-white/5">
+            <div className="max-w-4xl mx-auto text-center">
+                <span className="font-mono text-xs uppercase tracking-[0.3em] text-[#FF4400] mb-6 block">Made to Order</span>
+                <h2 className="text-4xl md:text-6xl font-light mb-8 tracking-tight">Reserve your Horizon</h2>
+                <p className="text-white/50 max-w-2xl mx-auto mb-16 leading-relaxed">
+                    Each unit is assembled by hand in our studio in Goa. Due to the complexity of the optical components, production is limited to 50 units per quarter.
+                </p>
 
-        {/* Purchase CTA */}
-        <section className="bg-[#111] text-white py-24 px-6 md:px-12 text-center">
-             <span className="font-mono text-xs uppercase tracking-widest text-[#FF4400] mb-4 block">Availability</span>
-             <h2 className="text-4xl md:text-6xl font-light mb-8">Reserve your Horizon.</h2>
-             <p className="text-white/60 max-w-xl mx-auto mb-12">
-                 Each unit is assembled by hand in our studio in Goa. Due to the complexity of the optical components, production is limited to 50 units per quarter.
-             </p>
-             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-                 <a 
-                    href="mailto:orders@poetics.studio?subject=Inquiry: Horizon" 
-                    className="bg-white text-black px-8 py-4 text-sm font-mono uppercase tracking-widest hover:bg-[#FF4400] hover:text-white transition-colors min-w-[200px]"
-                >
-                    Inquire Pricing
-                 </a>
-                 <span className="text-xs font-mono text-white/40">Ships Q4 2024</span>
-             </div>
+                <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a
+                        href="mailto:glasscape@poetics.studio?subject=Inquiry: Horizon"
+                        className="bg-white text-black px-10 py-5 text-xs font-mono uppercase tracking-[0.2em] hover:bg-[#FF4400] hover:text-white transition-colors min-w-[240px] text-center"
+                    >
+                        Inquire Pricing
+                    </a>
+                    <button className="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors">
+                        <Download className="w-4 h-4" /> Download Specs
+                    </button>
+                </div>
+
+                <p className="text-xs font-mono text-white/30 mt-12 uppercase tracking-widest">Ships Q2 2025</p>
+            </div>
         </section>
 
     </div>
