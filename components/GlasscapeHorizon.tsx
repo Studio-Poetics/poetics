@@ -93,9 +93,9 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                 <div className="mb-32">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
                         <div className="md:col-span-3">
-                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-4 block">01</span>
+                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-4 block">01</span>
                             <h3 className="text-3xl font-light mb-4 text-white">Horizon / Teak</h3>
-                            <p className="text-white/50 leading-relaxed">
+                            <p className="text-white/60 leading-relaxed">
                                 Natural solid teak base with warm grain. Premium holographic display. Handcrafted brass details.
                             </p>
                         </div>
@@ -113,9 +113,9 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                 <div className="mb-32">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
                         <div className="md:col-span-3">
-                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-4 block">02</span>
+                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-4 block">02</span>
                             <h3 className="text-3xl font-light mb-4 text-white">Horizon / Matte Black</h3>
-                            <p className="text-white/50 leading-relaxed">
+                            <p className="text-white/60 leading-relaxed">
                                 Hand-painted wood base in matte black finish. Minimal aesthetic for modern interiors. Seamless integration.
                             </p>
                         </div>
@@ -133,9 +133,9 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                 <div className="mb-32">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
                         <div className="md:col-span-3">
-                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-4 block">03</span>
+                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-4 block">03</span>
                             <h3 className="text-3xl font-light mb-4 text-white">Wall Installation</h3>
-                            <p className="text-white/50 leading-relaxed">
+                            <p className="text-white/60 leading-relaxed">
                                 Optional wall-mounted configuration. Flush mount with concealed power. Transforms into ambient art piece.
                             </p>
                         </div>
@@ -153,9 +153,9 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                 <div>
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
                         <div className="md:col-span-3">
-                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30 mb-4 block">04</span>
+                            <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-4 block">04</span>
                             <h3 className="text-3xl font-light mb-4 text-white">Ambient Display Mode</h3>
-                            <p className="text-white/50 leading-relaxed">
+                            <p className="text-white/60 leading-relaxed">
                                 Generative visuals in motion. Procedural animations that never repeat. Calm presence for meditation spaces.
                             </p>
                         </div>
@@ -272,7 +272,7 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
             >
                 glasscape@poetics.studio
             </a>
-            <p className="text-xs font-mono text-white/30 mt-8 uppercase tracking-widest">
+            <p className="text-xs font-mono text-white/50 mt-8 uppercase tracking-widest">
                 Ships Q2 2025 • Made to Order in Goa, India
             </p>
         </section>
