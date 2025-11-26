@@ -255,7 +255,7 @@ const GlasscapeHorizon: React.FC<GlasscapeHorizonProps> = ({ onNavigate }) => {
                     </div>
                     <div className="p-8 border border-black/10">
                         <h4 className="font-mono text-xs uppercase tracking-widest mb-2 text-black/40">Optical Precision</h4>
-                        <p className="text-sm text-black/60 leading-relaxed">Low-iron crystal glass with <0.01% distortion tolerance.</p>
+                        <p className="text-sm text-black/60 leading-relaxed">Low-iron crystal glass with &lt;0.01% distortion tolerance.</p>
                     </div>
                     <div className="p-8 border border-black/10">
                         <h4 className="font-mono text-xs uppercase tracking-widest mb-2 text-black/40">Quality Control</h4>
