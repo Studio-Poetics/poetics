@@ -96,7 +96,7 @@ const Games: React.FC<GamesProps> = ({ onNavigate }) => {
                     <div className="relative bg-gradient-to-br from-[#E0E5EC] to-[#C9D1D9] h-[400px] overflow-hidden">
                          {/* Placeholder for Wordsprint screenshot */}
                          <img
-                            src="https://picsum.photos/800/800?grayscale&random=12"
+                            src="/images/wordsprint/wordsprint-game.webp"
                             alt="Wordsprint Game"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                          />
