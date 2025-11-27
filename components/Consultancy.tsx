@@ -160,11 +160,11 @@ const Consultancy: React.FC<ConsultancyProps> = ({ onNavigate }) => {
                     <div className="py-8 border-b border-black/10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center opacity-60 hover:opacity-100 transition-opacity">
                         <div className="md:col-span-1 font-mono text-xs text-black/40">04</div>
                         <div className="md:col-span-5">
-                            <h3 className="text-2xl font-light">Fintech OS Redesign</h3>
+                            <h3 className="text-2xl font-light">Custom Hardware Development</h3>
                         </div>
                         <div className="md:col-span-4">
                             <p className="text-sm text-black/60">
-                                Complex data visualization and dashboard heuristics for a Tier-1 banking aggregator.
+                                Custom Game hardware development for an indie-game artist.
                             </p>
                         </div>
                          <div className="md:col-span-2 text-right">
