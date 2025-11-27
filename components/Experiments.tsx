@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import PoeticMachine from './PoeticMachine';
-import { Beaker, Wind, Mic, Armchair } from 'lucide-react';
+import { Image, Music, Video } from 'lucide-react';
 import SEO from './SEO';
 
 const CommunityLabVisual: React.FC = () => {
@@ -214,45 +214,42 @@ const Experiments: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
+
                     {/* Prototype Item 1 */}
-                    <div className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group">
+                    <a href="/experiments/pixelforge" className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group cursor-pointer">
                         <div className="mb-6 text-black/30 group-hover:text-[#FF4400] transition-colors">
-                            <Mic className="w-6 h-6" />
+                            <Image className="w-6 h-6" />
                         </div>
-                        {/* EDIT CONTENT */}
+                        <h3 className="text-lg font-medium mb-2">PixelForge</h3>
+                        <p className="text-sm text-black/60 leading-relaxed mb-4">
+                            A tool to batch process and optimise images for web.
+                        </p>
+                        <span className="text-xs font-mono uppercase bg-black/5 px-2 py-1 rounded text-black/50">Image Processing</span>
+                    </a>
+
+                    {/* Prototype Item 2 */}
+                    <a href="/experiments/media-hotkey-player" className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group cursor-pointer">
+                        <div className="mb-6 text-black/30 group-hover:text-[#FF4400] transition-colors">
+                            <Video className="w-6 h-6" />
+                        </div>
+                        <h3 className="text-lg font-medium mb-2">MediaHotkeyPlayer</h3>
+                        <p className="text-sm text-black/60 leading-relaxed mb-4">
+                            A media player for museums interactive installations.
+                        </p>
+                        <span className="text-xs font-mono uppercase bg-black/5 px-2 py-1 rounded text-black/50">Installation / AV</span>
+                    </a>
+
+                    {/* Prototype Item 3 */}
+                    <a href="/experiments/sonic-arch" className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group cursor-pointer">
+                        <div className="mb-6 text-black/30 group-hover:text-[#FF4400] transition-colors">
+                            <Music className="w-6 h-6" />
+                        </div>
                         <h3 className="text-lg font-medium mb-2">Sonic Architecture</h3>
                         <p className="text-sm text-black/60 leading-relaxed mb-4">
                             An attempt to convert 2D floorplans into musical scores based on room volume and light entry.
                         </p>
                         <span className="text-xs font-mono uppercase bg-black/5 px-2 py-1 rounded text-black/50">Audio / Spatial</span>
-                    </div>
-
-                    {/* Prototype Item 2 */}
-                    <div className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group">
-                        <div className="mb-6 text-black/30 group-hover:text-[#FF4400] transition-colors">
-                            <Armchair className="w-6 h-6" />
-                        </div>
-                        {/* EDIT CONTENT */}
-                        <h3 className="text-lg font-medium mb-2">The Uncomfortable Chair</h3>
-                        <p className="text-sm text-black/60 leading-relaxed mb-4">
-                            Generative 3D models of seating furniture trained to reject the human body. A study in hostile design.
-                        </p>
-                        <span className="text-xs font-mono uppercase bg-black/5 px-2 py-1 rounded text-black/50">3D / ML</span>
-                    </div>
-
-                    {/* Prototype Item 3 */}
-                    <div className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group">
-                        <div className="mb-6 text-black/30 group-hover:text-[#FF4400] transition-colors">
-                            <Wind className="w-6 h-6" />
-                        </div>
-                        {/* EDIT CONTENT */}
-                        <h3 className="text-lg font-medium mb-2">Local Weather Tape</h3>
-                        <p className="text-sm text-black/60 leading-relaxed mb-4">
-                            A thermal printer connected to open weather APIs that prints a poem every morning based on humidity.
-                        </p>
-                        <span className="text-xs font-mono uppercase bg-black/5 px-2 py-1 rounded text-black/50">IoT / Hardware</span>
-                    </div>
+                    </a>
 
                 </div>
             </div>

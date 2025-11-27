@@ -35,11 +35,14 @@ const Games: React.FC<GamesProps> = ({ onNavigate }) => {
                 >
                     <div className="relative bg-gradient-to-br from-[#7B8FA1] to-[#4A5F73] h-[400px] overflow-hidden">
                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                         {/* Placeholder for atmospheric image */}
-                         <img
-                            src="https://picsum.photos/1000/1000?grayscale&blur=2"
-                            alt="Monsoon Stories Atmosphere"
-                            className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                         {/* Hero Video */}
+                         <video
+                            src="/images/monsoon/hero-monsoon.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500"
                          />
 
                          <span className="absolute bottom-6 left-6 text-white font-mono text-xs uppercase tracking-widest z-20 opacity-80">

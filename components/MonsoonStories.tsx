@@ -35,10 +35,18 @@ const MonsoonStories: React.FC<MonsoonStoriesProps> = ({ onNavigate }) => {
 
         {/* ======================== HERO SECTION ======================== */}
         <header className="relative w-full min-h-screen flex items-center justify-center px-6 py-32 overflow-hidden">
-            {/* Atmospheric Background */}
-            <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-20 left-10 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            {/* Video Background */}
+            <div className="absolute inset-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover opacity-40"
+                >
+                    <source src="/images/monsoon/hero-monsoon.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-b from-[#7B8FA1]/50 to-[#5A6F82]"></div>
             </div>
 
             <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -137,15 +145,34 @@ const MonsoonStories: React.FC<MonsoonStoriesProps> = ({ onNavigate }) => {
                 <h3 className="text-2xl font-light mb-16 text-center">Early Character Explorations</h3>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="aspect-square bg-white/5 border border-white/10 rounded overflow-hidden">
-                            <img
-                                src={`https://picsum.photos/400/400?grayscale&random=${20+i}`}
-                                alt={`Character Sketch ${i}`}
-                                className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity"
-                            />
-                        </div>
-                    ))}
+                    <div className="aspect-square bg-white/5 border border-white/10 rounded overflow-hidden">
+                        <img
+                            src="/images/monsoon/render5.jpeg"
+                            alt="Character Sketch 1"
+                            className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                    </div>
+                    <div className="aspect-square bg-white/5 border border-white/10 rounded overflow-hidden">
+                        <img
+                            src="/images/monsoon/render6.jpeg"
+                            alt="Character Sketch 2"
+                            className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                    </div>
+                    <div className="aspect-square bg-white/5 border border-white/10 rounded overflow-hidden">
+                        <img
+                            src="/images/monsoon/render7.jpeg"
+                            alt="Character Sketch 3"
+                            className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                    </div>
+                    <div className="aspect-square bg-white/5 border border-white/10 rounded overflow-hidden">
+                        <img
+                            src="/images/monsoon/render8.jpg"
+                            alt="Character Sketch 4"
+                            className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                    </div>
                 </div>
 
                 <p className="text-center text-white/50 text-sm font-mono mt-8 uppercase tracking-widest">
