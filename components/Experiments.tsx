@@ -210,7 +210,7 @@ const Experiments: React.FC = () => {
             <div className="border-t border-black/10 pt-16">
                 <div className="flex justify-between items-end mb-12">
                     <h2 className="text-2xl font-light">Archive of Prototypes</h2>
-                    <span className="font-mono text-xs text-black/40 hidden md:block">Status: Inactive / Deprecated</span>
+                    <span className="font-mono text-xs text-black/40 hidden md:block">Status: Open Sorce / Demo Ready</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
