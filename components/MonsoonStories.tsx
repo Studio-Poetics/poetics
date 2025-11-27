@@ -44,7 +44,7 @@ const MonsoonStories: React.FC<MonsoonStoriesProps> = ({ onNavigate }) => {
                     playsInline
                     className="w-full h-full object-cover opacity-40"
                 >
-                    <source src="/images/monsoon/hero-monsoon.mp4" type="video/mp4" />
+                    <source src="/images/monsoon/hero-monsoon.webm" type="video/webm" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-b from-[#7B8FA1]/50 to-[#5A6F82]"></div>
             </div>
