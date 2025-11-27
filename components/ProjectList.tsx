@@ -26,7 +26,7 @@ const projects: Project[] = [
     id: '01',
     title: 'Glasscape Collection',
     category: 'Product Design',
-    year: '2024',
+    year: '2024/2025',
     description: 'Holographic displays for the modern sanctuary. Building with the immaterial.',
     imageUrl: '/images/glasscape/Glasscape-1.png',
     targetPage: Page.GLASSCAPE
@@ -35,7 +35,7 @@ const projects: Project[] = [
     id: '02',
     title: 'Proving the Invisible',
     category: 'Workshop Design',
-    year: '2024',
+    year: '2023',
     description: 'Designing intuitive learning experiences for Reclaim Protocol. A conceptual scaffolding system for ZK Proofs.',
     imageUrl: '/images/reclaim/hero_reclaim.webp',
     targetPage: Page.CASE_STUDY_RECLAIM
@@ -44,7 +44,7 @@ const projects: Project[] = [
     id: '03',
     title: 'India\'s Journey in Space',
     category: 'Anamorphic 3D Film',
-    year: '2024',
+    year: '2024-2025',
     description: 'A 5-minute 3D anamorphic film for Science City Kolkata showcasing the history of the Indian Space Program.',
     imageUrl: '/images/space/home-space.webp',
     targetPage: Page.CASE_STUDY_SPACE
@@ -53,7 +53,7 @@ const projects: Project[] = [
     id: '04',
     title: 'India Blockchain Week',
     category: 'Branding & Identity',
-    year: '2025',
+    year: '2023 & 2024',
     description: 'A vibrant collision of heritage and future. Defining the visual language of India\'s web3 revolution with generative mandalas.',
     imageUrl: '/images/ibw/Hero.webp',
     targetPage: Page.CASE_STUDY_IBW
@@ -62,7 +62,7 @@ const projects: Project[] = [
     id: '05',
     title: 'Wordsprint',
     category: 'Android Game Design',
-    year: '2023',
+    year: '2025',
     description: 'An Android vocabulary game where players practice language by unscrambling words and learning their meanings through interactive gameplay.',
     imageUrl: '/images/wordsprint/wordsprint-game.webp',
     targetPage: Page.CASE_STUDY_WORDSPRINT
@@ -71,7 +71,7 @@ const projects: Project[] = [
     id: '06',
     title: 'Micro-Gold Investment Platform',
     category: 'FinTech UX & Behavioral Design',
-    year: '2023',
+    year: '2024',
     description: "Designing culturally-sensitive saving habits for India's everyday investors. Transforming micro-investments into trust and long-term security.",
     imageUrl: '/images/micro-savings/MICRO-SAVINGS.png',
     targetPage: Page.CASE_STUDY_MICRO_GOLD
