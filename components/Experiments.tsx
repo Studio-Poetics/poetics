@@ -240,7 +240,7 @@ const Experiments: React.FC = () => {
                     </a>
 
                     {/* Prototype Item 3 */}
-                    <a href="/experiments/sonic-arch" className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group cursor-pointer">
+                    <a href="/experiments/sonic-arch" target="_blank" rel="noopener noreferrer" className="border border-black/5 p-8 bg-white hover:border-[#FF4400]/30 transition-colors group cursor-pointer">
                         <div className="mb-6 text-black/30 group-hover:text-[#FF4400] transition-colors">
                             <Music className="w-6 h-6" />
                         </div>
