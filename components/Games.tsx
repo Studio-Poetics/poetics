@@ -133,11 +133,11 @@ const Games: React.FC<GamesProps> = ({ onNavigate }) => {
                             </div>
                             <div>
                                 <span className="block text-black/30 mb-1">Year</span>
-                                2023
+                                2025
                             </div>
                             <div>
-                                <span className="block text-black/30 mb-1">Downloads</span>
-                                10,000+
+                                <span className="block text-black/30 mb-1">Download at</span>
+                                Android Playstore
                             </div>
                         </div>
 
