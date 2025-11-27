@@ -37,7 +37,7 @@ const Games: React.FC<GamesProps> = ({ onNavigate }) => {
                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                          {/* Hero Video */}
                          <video
-                            src="/images/monsoon/hero-monsoon.mp4"
+                            src="/images/monsoon/hero-monsoon.webm"
                             autoPlay
                             loop
                             muted
