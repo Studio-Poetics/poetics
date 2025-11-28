@@ -243,57 +243,56 @@ export const articles: Article[] = [
     Working in India’s tech cities slowly began to feel repetitive. People were making similar products, chasing the same goals, and using the same language about growth and scale. Over time, conversations at offices, meetups, and networking events started blending together, almost like hearing the same pitch again and again.
 </p>
 
-                <p className="mb-8">
-                    We found ourselves asking: what would it mean to build from a different vantage point? What ideas might emerge if we stepped outside the blackhole of startup culture?
-                </p>
+<p className="mb-8">
+    We started asking ourselves: what would happen if we looked at our work from a different place? What new ideas could come up if we stepped away from the usual startup loop?
+</p>
 
-                <p className="mb-16">
-                    Prayagraj offered that distance. Not just physical distance, but conceptual space. Here, we're not surrounded by people optimizing for the same goals. We're not constantly comparing our journey to others'. We have room to think differently.
-                </p>
+<p className="mb-16">
+    Prayagraj gave us that distance. Not only physical distance, but also mental space. Here, we’re not surrounded by people trying to optimise for the same goals. We’re not constantly comparing our path with others. We finally have space to think in our own way.
+</p>
 
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">The Economics of Attention</h2>
-                <p className="mb-8">
-                    There's also another truth: the cost of living in Bangalore/Mumbai/Delhi makes certain kinds of work impossible. When your operating costs is high, you're forced to take projects that pay quickly rather than projects that matter the most.
-                </p>
+<h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">The Economics of Attention</h2>
+<p className="mb-8">
+    There is another simple truth: living in Bangalore, Mumbai, or Delhi makes certain kinds of work very hard. When your cost of living is high, you end up taking projects that pay fast instead of projects that actually matter to you.
+</p>
 
-                <p className="mb-8">
-                    In Prayagraj, our studio rent costs less than a single client dinner in South Mumbai.We have a full floor to ourselves in our house built by my father. This economic breathing room, this privillege, allows us to say no to work that doesn't align with our values. It lets us invest time in R&D, in experiments, in essays like this one.
-                </p>
+<p className="mb-8">
+    In Prayagraj, our studio rent is cheaper than one client dinner in South Mumbai. We have an entire floor to ourselves in the house my father built. This financial breathing room — this privilege — helps us say no to work that doesn’t match our values. It lets us invest time in R&D, in experiments, and in writing pieces like this.
+</p>
 
-                <p className="mb-16">
-                    We're not escaping from ambition. We're creating the conditions where ambitious, meaningful work becomes possible.
-                </p>
+<p className="mb-16">
+    We’re not running away from ambition. We’re creating the right conditions for meaningful, ambitious work to actually grow.
+</p>
 
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Connection to Context</h2>
-                <p className="mb-8">
-                    There's something profound about working in a place with deep historical memory. Prayagraj has been a confluence for thousands of years. Ideas, traditions, and people have always flowed through here.
-                </p>
+<h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Connection to Context</h2>
+<p className="mb-8">
+    There is something special about working in a place with deep history. Prayagraj has been a meeting point for thousands of years. People, ideas, and traditions have always passed through this city.
+</p>
 
-                <p className="mb-8">
-                    When we design here, we're reminded that we're not building in a vacuum. We're building in a country with complex traditions around craftsmanship, community, and rituals. These aren't aesthetic inspirations to appropriate — they're living contexts and rituals to learn from.
-                </p>
+<p className="mb-8">
+    Designing here reminds us that our work doesn’t exist on its own. It sits inside a culture with rich traditions of craft, community, and ritual. These are not just visual inspirations to copy — they are living practices to respect and learn from.
+</p>
 
-                <p className="mb-16">
-                    Being here keeps us relaxed. It reminds us that technology doesn't exist in the abstract. It lands somewhere. It affects someone. And those someones deserve our attention. And above all by staying close to our family it helps us answer "why we work so hard?".
-                </p>
+<p className="mb-16">
+    Being here keeps us grounded. It reminds us that technology always lands somewhere, and it always touches someone’s life. Those people deserve our attention. And staying close to our family helps us answer a simple question: why do we work so hard?
+</p>
 
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Happiness as Strategy</h2>
-                <p className="mb-8">
-                    Perhaps the most important reason we're here: we needed to learn that our work is just work its not the only thing in our lives. The rush to become someone and something as quickly as possible is so strong in this world that often th ejoy of making is left out, and thats when mediocrity and dishonest work creeps in. 
-                    We have the privillege to continue to work without the greed to be someone other than ourselves. 
-                </p>
+<h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Happiness as Strategy</h2>
+<p className="mb-8">
+    Maybe the most important reason we are here is this: we needed to remember that work is only one part of our lives. The pressure to “become someone” quickly often removes the joy of making, and that’s when mediocre and insincere work begins. We are fortunate that we can keep working without trying to become someone else.
+</p>
 
-                <p className="mb-8">
-                    In the startup ecosystem, resting is treated as task. Rest is a planned activity for which you need pers=mission from your bosses and investors. We believe that rest is integral and rest can also lead to work being done. Some of our best work has emerged from long, meandering conversations. From sitting with a problem for weeks instead of hours. From letting ideas settle before rushing to execution.
-                </p>
+<p className="mb-8">
+    In the startup world, rest is treated like a task. Rest becomes something you need permission for, from bosses or investors. We see it differently. Rest is essential, and rest can also lead to real work. Some of our best ideas have come from long, wandering conversations. From sitting with a problem for weeks, not hours. From letting thoughts settle before rushing to build.
+</p>
 
-                <p className="mb-12">
-                    Prayagraj gives us permission for that pace. The city itself moves differently — not sluggishly, but with a kind of unhurried confidence. It's teaching us that urgency and importance aren't the same thing.
-                </p>
+<p className="mb-12">
+    Prayagraj gives us the comfort to live at that pace. The city moves differently — not slowly, but without hurry. It’s teaching us that urgency and importance are not the same.
+</p>
 
-                <p className="text-sm text-black/50 italic mt-16 border-t border-black/10 pt-8">
-                    Written from our studio in Prayagraj/Goa/Cloud.
-                </p>
+<p className="text-sm text-black/50 italic mt-16 border-t border-black/10 pt-8">
+    Written from our studio in Prayagraj/Goa/Cloud.
+</p>
             </>
         )
     }
