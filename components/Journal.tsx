@@ -237,10 +237,11 @@ export const articles: Article[] = [
                     In the race of metro cities, there's a kind of amnesia that sets in. You forget that thinking takes time. That boredom is required to focus. That the best work often emerges not from hustle, but from observations — sustained, patient, unhurried attention.
                 </p>
 
-                <h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Escaping the Echo Chamber</h2>
-                <p className="mb-8">
-                    Working in India's tech hubs felt increasingly like being trapped in an echo chamber. Everyone was building the same things, chasing the same metrics, speaking the same language of growth and scale. The conversations at offices, gatherings, and networking events all began to blur into one continuous pitch deck.
-                </p>
+       
+<h2 className="text-2xl md:text-3xl font-light mb-6 mt-16">Getting Out of the Same Routine</h2>
+<p className="mb-8">
+    Working in India’s tech cities slowly began to feel repetitive. People were making similar products, chasing the same goals, and using the same language about growth and scale. Over time, conversations at offices, meetups, and networking events started blending together, almost like hearing the same pitch again and again.
+</p>
 
                 <p className="mb-8">
                     We found ourselves asking: what would it mean to build from a different vantage point? What ideas might emerge if we stepped outside the blackhole of startup culture?
