@@ -19,10 +19,11 @@ Your code is **pushed to GitHub** and **ready to deploy**!
    Value: AIzaSyAW13AVeblbuJXy3A10Nf41wxS8Y2m6CdE
    ```
 5. **Select Environments**:
-   - ☑️ Production
-   - ☑️ Preview
-   - ☑️ Development
-6. **Click**: Save
+   - ☑️ Production (mark as "Sensitive")
+   - ☑️ Preview (can't mark sensitive - that's okay)
+   - ☑️ Development (can't mark sensitive - that's okay)
+6. **Note**: Only Production allows "Sensitive" toggle. This is normal! Add to all three environments so preview deployments work.
+7. **Click**: Save
 
 ### **Step 2: Trigger Redeploy**
 

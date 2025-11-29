@@ -88,6 +88,7 @@ This guide explains how to securely configure the Google Gemini API for the Poet
      - **Name**: `GEMINI_API_KEY`
      - **Value**: `your_actual_api_key`
      - **Environments**: Select **Production**, **Preview**, and **Development**
+     - **Note**: Only Production allows "Sensitive" toggle - that's okay! Mark it sensitive for Production, but add to all three environments for preview deployments and `vercel dev` to work.
 
 3. **Redeploy**:
    - Vercel will automatically redeploy
