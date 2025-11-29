@@ -35,7 +35,9 @@ This guide explains how to securely configure the Google Gemini API for the Poet
 
 ## ✅ What's Already Configured
 
-1. **API Route**: `/api/generate` - Vercel serverless function
+1. **API Routes**:
+   - `/api/generate` - Text generation for Iconoclast (design history analysis)
+   - `/api/analyze-architecture` - Image analysis for Sonic Architecture (floorplan to music)
 2. **Security Features**:
    - CORS headers configured
    - POST-only requests
@@ -44,8 +46,8 @@ This guide explains how to securely configure the Google Gemini API for the Poet
    - Rate limiting (via Vercel)
 
 3. **Components Using API**:
-   - ✅ PoeticMachine (Iconoclast) - `/components/PoeticMachine.tsx`
-   - ⏳ Sonic Architecture - Needs update
+   - ✅ PoeticMachine (Iconoclast) - `/components/PoeticMachine.tsx` → `/api/generate`
+   - ✅ Sonic Architecture - `/sonic-architecture/services/geminiService.ts` → `/api/analyze-architecture`
 
 ## 🚀 Setup Instructions
 
@@ -110,7 +112,9 @@ This guide explains how to securely configure the Google Gemini API for the Poet
 
 ## 📝 API Endpoint Usage
 
-### Request Format
+### Endpoint 1: `/api/generate` (Iconoclast - Text Generation)
+
+**Request Format:**
 
 ```typescript
 const response = await fetch('/api/generate', {
@@ -127,19 +131,65 @@ const data = await response.json();
 console.log(data.text); // AI response
 ```
 
-### Response Format
+**Response Format:**
 
-**Success:**
+Success:
 ```json
 {
   "text": "the eames lounge chair (1956) challenged notions of comfort..."
 }
 ```
 
-**Error:**
+Error:
 ```json
 {
   "error": "Invalid input"
+}
+```
+
+### Endpoint 2: `/api/analyze-architecture` (Sonic Architecture - Image Analysis)
+
+**Request Format:**
+
+```typescript
+const response = await fetch('/api/analyze-architecture', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    base64Image: 'base64_encoded_image_data_without_prefix',
+    mimeType: 'image/jpeg' // or 'image/png', etc.
+  }),
+});
+
+const data = await response.json();
+console.log(data); // Sonic analysis data
+```
+
+**Response Format:**
+
+Success:
+```json
+{
+  "volume": 0.7,
+  "brightness": 0.8,
+  "complexity": 0.5,
+  "materials": "Glass, Steel",
+  "mood": "Modern, Minimalist",
+  "suggestedKey": "C Major",
+  "tempo": 120,
+  "genre": "Ambient",
+  "detectedFeatures": ["Open floor plan", "Large windows", "Minimal furniture"],
+  "architecturalDescription": "A bright, airy space with flowing acoustics..."
+}
+```
+
+Error:
+```json
+{
+  "error": "Invalid image data",
+  "details": "Error message here"
 }
 ```
 
