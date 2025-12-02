@@ -276,20 +276,30 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
                 {/* Item 2: Logo Mark Construction */}
                 <div className="aspect-square border border-black rounded-lg relative overflow-hidden group bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
-                     <div className="p-8 h-full flex flex-col justify-center">
-                        <div className="text-center mb-6">
+                     <div className="p-8 h-full flex flex-col justify-between">
+                        <div className="text-center">
                             <span className="text-xs text-black/40 uppercase tracking-widest">Logo Mark</span>
                         </div>
 
-                        <img
-                            src="/images/ibw/casestudy/Logo-mark-grid.png"
-                            alt="Logo Mark Construction Grid"
-                            className="w-full h-auto object-contain"
-                        />
+                        <div className="flex-1 flex items-center justify-center py-6">
+                            <img
+                                src="/images/ibw/casestudy/Logo-mark-grid.png"
+                                alt="Logo Mark Construction Grid"
+                                className="w-full max-w-[80%] h-auto object-contain"
+                            />
+                        </div>
 
-                        <p className="text-sm text-black/60 leading-relaxed mt-6 text-center">
-                            The logo mark is a circular mandala inspired by Indian art and symbolism. In the centre, a lotus flower blooms, representing both India's cultural heritage and the potential of blockchain technology.
-                        </p>
+                        <div className="space-y-3">
+                            <h4 className="text-base font-semibold text-black text-center">Construction & Meaning</h4>
+                            <p className="text-xs text-black/70 leading-relaxed text-center">
+                                A <span className="font-medium text-black">circular mandala</span> inspired by Indian art, with a <span className="font-medium text-black">lotus flower</span> at the centre.
+                            </p>
+                            <div className="pt-2 border-t border-black/10">
+                                <p className="text-xs text-black/50 text-center font-mono uppercase tracking-widest">
+                                    Sacred Geometry × Digital Innovation
+                                </p>
+                            </div>
+                        </div>
                      </div>
                 </div>
 
@@ -430,8 +440,8 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                          Each ticket type represented different access levels and became a digital collectible commemorating India's premier blockchain event.
                      </p>
                      <div className="flex gap-4">
-                         <div className="px-4 py-2 border border-white/20 rounded font-mono text-xs">WebGL</div>
-                         <div className="px-4 py-2 border border-white/20 rounded font-mono text-xs">Polygon</div>
+                         <div className="px-4 py-2 border border-white/20 rounded font-mono text-xs">Digital Assets</div>
+                         <div className="px-4 py-2 border border-white/20 rounded font-mono text-xs">NFT Collection</div>
                      </div>
                 </div>
                 
