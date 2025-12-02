@@ -10,6 +10,8 @@ interface CaseStudyProps {
 
 const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [selectedNFT, setSelectedNFT] = useState<any>(null);
+  const [selectedTemplate, setSelectedTemplate] = useState<any>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -39,16 +41,21 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen bg-[#F4F4F0] text-[#111] selection:bg-[#FF9933] selection:text-black">
-        <SEO 
-            title="India Blockchain Week - Identity System"
-            description="Case Study: A generative brand identity system for India's web3 revolution. Bridging heritage and future through mandala systems."
-            keywords={['India Blockchain Week Branding', 'Generative Identity', 'Web3 Design India', 'Mandala Design System', 'Blockchain Event Branding']}
+        <SEO
+            title="India Blockchain Week 2023 - Brand Identity Design Case Study | Poetics Studio"
+            description="Explore our comprehensive brand identity design for India Blockchain Week 2023. From mandala-inspired logos to NFT tickets, discover how we bridged Indian heritage with blockchain innovation for 2000+ attendees, 135+ speakers, and 100+ events."
+            keywords={['India Blockchain Week 2023', 'Blockchain Event Branding', 'Web3 Design India', 'Mandala Logo Design', 'NFT Ticket Design', 'Cryptocurrency Event Branding', 'Indian Cultural Design', 'Blockchain Conference Identity', 'Event Brand Design', 'Digital Asset Design', 'Poetics Studio Portfolio', 'Generative Brand System']}
             schema={{
                 "@type": "CreativeWork",
-                "name": "India Blockchain Week Identity",
-                "creator": "Poetics Studio",
-                "genre": "Brand Identity System",
-                "award": "Featured in Brand New (Hypothetical)"
+                "name": "India Blockchain Week 2023 - Brand Identity System",
+                "creator": {
+                    "@type": "Organization",
+                    "name": "Poetics Studio"
+                },
+                "genre": "Brand Identity Design",
+                "dateCreated": "2023",
+                "about": "Comprehensive brand identity design for India's premier blockchain conference featuring mandala-inspired visual systems, NFT ticketing, and cultural heritage integration",
+                "keywords": "blockchain branding, web3 design, event identity, NFT design, Indian cultural design"
             }}
         />
 
@@ -97,7 +104,7 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                     </div>
                     <div>
                         <span className="block text-black/30 mb-1">Year</span>
-                        2024 — 2025
+                        2023 — 2024
                     </div>
                 </div>
             </div>
@@ -126,8 +133,8 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
 
         {/* ======================== NARRATIVE ======================== */}
-        <section className="grid grid-cols-1 md:grid-cols-12 border-b border-black">
-            <div className="md:col-span-8 md:col-start-3 px-6 py-24 md:py-32 md:border-x border-black bg-white">
+        <section className="grid grid-cols-1 md:grid-cols-12 border-b border-black mt-16">
+            <div className="md:col-span-8 md:col-start-3 px-8 py-24 md:py-32 md:border-x border-black bg-white">
                 
                 <h2 className="text-3xl md:text-5xl font-light leading-tight mb-12">
                     How do you visualize a decentralized future without losing the warmth of heritage?
@@ -148,9 +155,9 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
         </section>
 
         {/* ======================== SCALE OF EVENT ======================== */}
-        <section className="bg-[#111] text-[#F4F4F0] border-b border-black">
-             <div className="px-6 py-4 border-b border-white/20 flex justify-between items-center bg-[#1a1a1a]">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#ffa232]">01. Impact & Scale</span>
+        <section className="bg-[#111] text-[#F4F4F0] border-b border-black mt-24">
+             <div className="px-6 py-8 border-b border-white/20 flex justify-between items-center bg-[#1a1a1a]">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest text-[#ffa232]">01. Impact & Scale</span>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y divide-white/10 border-b border-white/10">
@@ -164,32 +171,32 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                 {/* Metric 2 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
                     <Globe className="w-6 h-6 text-[#ffa232] mb-6 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">50+</h3>
-                    <p className="font-mono text-xs uppercase tracking-widest text-white/50">Countries</p>
+                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">135+</h3>
+                    <p className="font-mono text-xs uppercase tracking-widest text-white/50">Speakers</p>
                 </div>
 
                 {/* Metric 3 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
                     <Layers className="w-6 h-6 text-[#f450b2] mb-6 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">125+</h3>
-                    <p className="font-mono text-xs uppercase tracking-widest text-white/50">Side Events</p>
+                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">35+</h3>
+                    <p className="font-mono text-xs uppercase tracking-widest text-white/50">Sponsors</p>
                 </div>
 
                 {/* Metric 4 */}
                 <div className="p-8 md:p-12 hover:bg-white/5 transition-colors group">
                     <Cpu className="w-6 h-6 text-[#3fcbff] mb-6 group-hover:scale-110 transition-transform" />
-                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">7 Days</h3>
-                    <p className="font-mono text-xs uppercase tracking-widest text-white/50">Of Innovation</p>
+                    <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2">100+</h3>
+                    <p className="font-mono text-xs uppercase tracking-widest text-white/50">Side Events</p>
                 </div>
             </div>
         </section>
 
 
         {/* ======================== COLOR SYSTEM (Interactive) ======================== */}
-        <section className="w-full border-b border-black">
-            <div className="px-6 py-4 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
-                <span className="font-mono text-xs uppercase tracking-widest">02. Spectrum System</span>
-                <span className="font-mono text-xs text-black/40 hidden md:inline">Hover to expand</span>
+        <section className="w-full border-b border-black mt-24">
+            <div className="px-6 py-8 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest">02. Spectrum System</span>
+                <span className="font-mono text-sm text-black/40 hidden md:inline">Hover to expand</span>
             </div>
             
             <div className="h-[60vh] flex flex-col md:flex-row w-full">
@@ -239,48 +246,55 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
 
         {/* ======================== VISUAL GRID ======================== */}
-        <section className="bg-white border-b border-black">
-            <div className="px-6 py-4 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
-                <span className="font-mono text-xs uppercase tracking-widest">03. Application</span>
+        <section className="bg-white border-b border-black mt-24">
+            <div className="px-6 py-8 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest">03. Application</span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2">
-                
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+
                 {/* Item 1: Typography */}
-                <div className="aspect-square border-b border-black md:border-r p-8 md:p-16 flex flex-col justify-between group">
-                    <div>
-                        <span className="font-mono text-xs text-black/40 mb-4 block">Typography</span>
-                        <h3 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none group-hover:text-[#FF9933] transition-colors">
-                            BOLD<br/>MOVES<br/>ONLY.
-                        </h3>
-                    </div>
-                    <div className="text-sm font-mono text-black/60">
-                        Typeface: Monument Extended<br/>
-                        Usage: Headlines / Impact
+                <div className="aspect-square border border-black rounded-lg p-8 md:p-16 flex flex-col justify-center group bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <div className="text-center">
+                        <span className="text-xs text-black/40 mb-8 block uppercase tracking-widest">Typography</span>
+
+                        {/* Large Display of Jost */}
+                        <div className="mb-8">
+                            <h3 className="text-8xl font-light text-black mb-2">Aa</h3>
+                            <p className="text-2xl font-bold text-black mb-1">JOST</p>
+                            <p className="text-sm text-black/60">Google Fonts</p>
+                        </div>
+
+                        {/* Character Set */}
+                        <div className="text-xs text-black/60 leading-relaxed">
+                            <p className="mb-2">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                            <p className="mb-2">abcdefghijklmnopqrstuvwxyz</p>
+                            <p>0123456789</p>
+                        </div>
                     </div>
                 </div>
 
-                {/* Item 2: Pattern */}
-                <div className="aspect-square border-b border-black relative overflow-hidden group">
-                     <div className="absolute inset-0 bg-black"></div>
-                     {/* CSS Grid Pattern */}
-                     <div className="absolute inset-0" 
-                          style={{ 
-                              backgroundImage: 'linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)', 
-                              backgroundSize: '40px 40px' 
-                          }}>
-                     </div>
-                     {/* Floating Elements */}
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-2 border-[#E01E5A] rounded-full mix-blend-screen animate-pulse" />
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-[#FF9933] rotate-45 mix-blend-screen" />
-                     
-                     <div className="absolute bottom-8 left-8 text-white font-mono text-xs z-10">
-                        Grid System / Backgrounds
+                {/* Item 2: Logo Mark Construction */}
+                <div className="aspect-square border border-black rounded-lg relative overflow-hidden group bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
+                     <div className="p-8 h-full flex flex-col justify-center">
+                        <div className="text-center mb-6">
+                            <span className="text-xs text-black/40 uppercase tracking-widest">Logo Mark</span>
+                        </div>
+
+                        <img
+                            src="/images/ibw/casestudy/Logo-mark-grid.png"
+                            alt="Logo Mark Construction Grid"
+                            className="w-full h-auto object-contain"
+                        />
+
+                        <p className="text-sm text-black/60 leading-relaxed mt-6 text-center">
+                            The logo mark is a circular mandala inspired by Indian art and symbolism. In the centre, a lotus flower blooms, representing both India's cultural heritage and the potential of blockchain technology.
+                        </p>
                      </div>
                 </div>
 
                 {/* Item 3: Event Snapshots */}
-                <div className="aspect-[4/3] md:col-span-2 relative overflow-hidden group">
+{/*                 <div className="aspect-[4/3] md:col-span-2 relative overflow-hidden group">
                     <img
                         src="/images/ibw/mosaic.png"
                         alt="Event Snapshots"
@@ -293,24 +307,127 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                             Event Snapshots
                         </span>
                     </div>
+                </div> */}
+            </div>
+        </section>
+
+        {/* ======================== SOCIAL MEDIA TEMPLATES ======================== */}
+        <section className="bg-white border-b border-black mt-24">
+            <div className="px-6 py-8 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest">04. Social Media Templates</span>
+                <span className="font-mono text-sm text-black/40 hidden md:inline">Hover to expand</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row h-80 md:h-96 mt-4">
+                {[
+                    { name: 'Speaker Announcement', image: '/images/ibw/casestudy/Social-media-templates/speaker-announcement.png', isMain: true },
+                    { name: 'Daily Update', image: '/images/ibw/casestudy/Social-media-templates/daily-update.png', isMain: false },
+                    { name: 'Social Media', image: '/images/ibw/casestudy/Social-media-templates/social-media.png', isMain: false }
+                ].map((template, index) => (
+                    <div
+                        key={index}
+                        className={`${template.isMain ? 'flex-[2]' : 'flex-1'} border-b md:border-b-0 md:border-r border-black relative overflow-hidden group cursor-pointer transition-all duration-700 ease-in-out hover:flex-[3] last:border-r-0`}
+                        onClick={() => setSelectedTemplate(template)}
+                    >
+                        <img
+                            src={template.image}
+                            alt={`${template.name} Template`}
+                            className="w-full h-full object-contain bg-white"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300">
+                            <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span className="text-black text-xs bg-white/90 px-3 py-2 rounded shadow">{template.name}</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* ======================== PATTERNS & ICONOGRAPHY ======================== */}
+        <section className="bg-[#F4F4F0] border-b border-black mt-24">
+            <div className="px-6 py-8 border-b border-black flex justify-between items-center">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest">05. Patterns & Iconography</span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+                <div className="aspect-square border border-black rounded-lg relative overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <img
+                        src="/images/ibw/casestudy/Pattern.png"
+                        alt="Pattern Design"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-8 left-8">
+                        <span className="text-xs text-white bg-black/50 px-2 py-1 rounded">Patterns</span>
+                    </div>
+                </div>
+
+                <div className="aspect-square border border-black rounded-lg bg-[#111] relative overflow-hidden group shadow-sm hover:shadow-lg transition-shadow duration-300">
+                    <img
+                        src="/images/ibw/casestudy/Logo-pattern.png"
+                        alt="Pattern Design"
+                        className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#3fcbff]/20 to-[#f450b2]/20"></div>
+                    <div className="absolute bottom-8 left-8">
+                        <span className="text-xs text-white/80">Pattern System</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        {/* ======================== NFT DESIGN ======================== */}
-        <section className="bg-[#050505] text-[#F4F4F0] border-b border-black py-24 px-6 md:px-12 overflow-hidden relative">
+        {/* ======================== WEBSITE DESIGN ======================== */}
+        <section className="bg-white border-b border-black mt-24">
+            <div className="px-6 py-8 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest">06. Website</span>
+            </div>
+
+            <div className="aspect-[16/10] relative overflow-hidden border-b border-black bg-white cursor-pointer group" onClick={() => window.open('https://indiablockchainweek.com/ibw-2023', '_blank')}>
+                <img
+                    src="/images/ibw/casestudy/website-light.png"
+                    alt="IBW Website Design"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <span className="text-black bg-white/90 px-4 py-2 rounded-full text-sm font-medium shadow-lg">Visit Live Site</span>
+                </div>
+                <div className="hidden w-full h-full bg-[#111] p-8 absolute inset-0">
+                    <div className="w-full h-full bg-white rounded-lg shadow-2xl p-6 relative overflow-hidden">
+                        <div className="flex justify-between items-center mb-6">
+                            <div className="text-2xl font-bold">IBW 2024</div>
+                            <div className="flex gap-4 text-sm">
+                                <span>Speakers</span>
+                                <span>Schedule</span>
+                                <span>Sponsors</span>
+                                <span>Register</span>
+                            </div>
+                        </div>
+                        <div className="h-32 bg-gradient-to-r from-[#FFF42F] via-[#ffa232] to-[#f450b2] rounded-lg mb-4 flex items-center justify-center">
+                            <h1 className="text-4xl font-bold text-black">INDIA BLOCKCHAIN WEEK</h1>
+                        </div>
+                        <div className="grid grid-cols-3 gap-4 h-20">
+                            <div className="bg-gray-100 rounded"></div>
+                            <div className="bg-gray-100 rounded"></div>
+                            <div className="bg-gray-100 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* ======================== NFT & TICKETS ======================== */}
+        <section className="bg-[#050505] text-[#F4F4F0] border-b border-black py-32 md:py-48 px-6 md:px-12 overflow-hidden relative mt-24">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-            
+
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
                 <div>
-                     <span className="font-mono text-xs uppercase tracking-widest text-[#9B4DCA] mb-4 block">Digital Artifacts</span>
+                     <span className="font-mono text-lg font-semibold uppercase tracking-widest text-[#9B4DCA] mb-6 block">Digital Artifacts & Ticketing</span>
                      <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-none">
-                         Soulbound <br/> Commemoratives
+                         NFT Tickets &<br/> Commemoratives
                      </h2>
                      <p className="text-white/60 leading-relaxed mb-8">
-                         Beyond the physical, we designed the "Genesis Pulse" NFT collection. 
-                         These soulbound tokens served as proof-of-attendance, utilizing a 
-                         procedural shader that generated a unique mandala for every single attendee based on their wallet address.
+                         These NFT tickets were digitally issued to attendees, who had the unique opportunity to mint them into NFTs and own the very first IBW NFT collection.
+                         Each ticket type represented different access levels and became a digital collectible commemorating India's premier blockchain event.
                      </p>
                      <div className="flex gap-4">
                          <div className="px-4 py-2 border border-white/20 rounded font-mono text-xs">WebGL</div>
@@ -318,28 +435,120 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                      </div>
                 </div>
                 
-                <div className="aspect-square bg-[#111] rounded-xl border border-white/10 relative flex items-center justify-center overflow-hidden group">
-                    {/* Placeholder for NFT Video/Image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#9B4DCA]/20 to-[#E01E5A]/20 opacity-50 group-hover:opacity-80 transition-opacity"></div>
-                    <div className="w-2/3 h-2/3 border border-white/30 rounded-lg flex items-center justify-center relative shadow-[0_0_50px_rgba(155,77,202,0.3)] group-hover:scale-105 transition-transform duration-700">
-                        <div className="text-center">
-                            <Cpu className="w-12 h-12 text-white mx-auto mb-4 opacity-80" />
-                            <span className="font-mono text-xs uppercase tracking-widest">Genesis Pulse #001</span>
+                <div className="bg-[#111] rounded-xl border border-white/10 p-8">
+                    {/* NFT Grid Layout */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        {[
+                            { name: 'General Pass', image: '/images/ibw/casestudy/NFT/General-Pass.png', color: 'from-[#FFF42F]' },
+                            { name: 'Premium Pass', image: '/images/ibw/casestudy/NFT/Premium-Pass.png', color: 'from-[#ffa232]' },
+                            { name: 'Speaker Pass', image: '/images/ibw/casestudy/NFT/Speaker-Pass.png', color: 'from-[#f450b2]' },
+                            { name: 'Student Pass', image: '/images/ibw/casestudy/NFT/Student-Pass.png', color: 'from-[#3fcbff]' }
+                        ].map((nft, index) => (
+                            <div key={index} className="group cursor-pointer" onClick={() => setSelectedNFT(nft)}>
+                                <div className="aspect-square rounded-2xl overflow-hidden border border-white/20 group-hover:border-white/40 transition-all duration-300 group-hover:scale-105 mb-4">
+                                    <img
+                                        src={nft.image}
+                                        alt={nft.name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="text-center">
+                                    <h4 className="text-white font-semibold text-sm mb-1">{nft.name}</h4>
+                                    <div className={`h-1 w-full bg-gradient-to-r ${nft.color} to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}></div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* NFT Collection Info */}
+                    <div className="mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <span className="text-white/40 text-xs uppercase tracking-widest block mb-1">Collection</span>
+                            <span className="text-white font-semibold">IBW 2023 Genesis Collection</span>
+                        </div>
+                        <div className="flex gap-6 text-xs text-white/60">
+                            <div>
+                                <span className="block text-white/40 uppercase tracking-widest mb-1">Total Supply</span>
+                                <span className="text-white">2000+ Tickets</span>
+                            </div>
+                            <div>
+                                <span className="block text-white/40 uppercase tracking-widest mb-1">Format</span>
+                                <span className="text-white">Digital Tickets</span>
+                            </div>
+                            <div>
+                                <span className="block text-white/40 uppercase tracking-widest mb-1">Type</span>
+                                <span className="text-white">Mintable NFTs</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        {/* ======================== EVENT PRINTS & MARKETING COLLATERAL ======================== */}
+        {/* SECTION TEMPORARILY HIDDEN
+        <section className="bg-white border-b border-black">
+            <div className="px-6 py-4 border-b border-black bg-[#F4F4F0] flex justify-between items-center">
+                <span className="font-mono text-xs uppercase tracking-widest">07. Event Prints & Marketing Collateral</span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px]">
+                <div className="md:col-span-2 border-b border-black md:border-r relative overflow-hidden group">
+                    <img
+                        src="/images/ibw/poster-main.png"
+                        alt="Main Event Poster"
+                        className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                        onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.nextElementSibling.style.display = 'flex';
+                        }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#FFF42F] to-[#f450b2] flex items-center justify-center hidden">
+                        <div className="text-center text-black">
+                            <h3 className="text-4xl font-bold mb-4">IBW 2024</h3>
+                            <p className="font-mono text-sm">Main Event Poster</p>
+                        </div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <span className="font-mono text-xs uppercase tracking-widest text-white">Main Event Poster</span>
+                    </div>
+                </div>
+
+                <div className="border-b border-black md:border-r relative overflow-hidden group bg-[#F4F4F0]">
+                    <div className="h-full p-8 flex flex-col justify-center">
+                        <div className="aspect-[3/4] bg-white rounded-lg shadow-lg p-4 mb-4">
+                            <div className="h-1/3 bg-gradient-to-r from-[#ffa232] to-[#f450b2] rounded mb-3"></div>
+                            <div className="h-2/3 space-y-2">
+                                <div className="h-3 bg-gray-200 rounded w-3/4"></div>
+                                <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+                                <div className="h-3 bg-gray-200 rounded w-2/3"></div>
+                            </div>
+                        </div>
+                        <span className="font-mono text-xs text-black/60 text-center">Brochure Design</span>
+                    </div>
+                </div>
+
+                <div className="border-b border-black relative overflow-hidden group bg-[#111]">
+                    <div className="h-full p-8 flex flex-col justify-center">
+                        <div className="aspect-square bg-[#3fcbff] rounded-xl mb-4 flex items-center justify-center">
+                            <span className="text-2xl font-bold text-black">IBW</span>
+                        </div>
+                        <span className="font-mono text-xs text-white/60 text-center">Badge Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        */}
+
         {/* ======================== THE ARCHIVE (MOSAIC GALLERY) ======================== */}
-        <section className="bg-[#F4F4F0]">
-            <div className="px-6 py-4 border-b border-black flex justify-between items-center">
-                <span className="font-mono text-xs uppercase tracking-widest">04. The Archive: Event Collaterals</span>
-                <span className="font-mono text-xs text-black/40">12 Items</span>
+        <section className="bg-[#F4F4F0] mt-24">
+            <div className="px-6 py-8 border-b border-black flex justify-between items-center">
+                <span className="font-mono text-lg font-semibold uppercase tracking-widest">08. The Archive: Event Collaterals</span>
+                <span className="font-mono text-sm text-black/40">12 Items</span>
             </div>
 
             {/* Masonry-ish Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] md:auto-rows-[300px] gap-2 p-4">
 
                 {/* IBW Images */}
                 {[
@@ -379,7 +588,7 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
 
 
         {/* ======================== FOOTER NAV ======================== */}
-        <div className="bg-[#111] text-white py-24 px-6 md:px-12 flex flex-col md:flex-row justify-between items-end">
+        <div className="bg-[#111] text-white py-24 md:py-32 px-8 md:px-16 flex flex-col md:flex-row justify-between items-end mt-24">
             <div>
                 <span className="font-mono text-xs uppercase tracking-widest text-white/40 mb-4 block">Next Case Study</span>
                 <h2 className="text-3xl md:text-5xl font-bold tracking-tighter hover:text-[#FF9933] cursor-pointer transition-colors" onClick={() => onNavigate(Page.CASE_STUDY_RECLAIM)}>
@@ -394,6 +603,82 @@ const CaseStudyIBW: React.FC<CaseStudyProps> = ({ onNavigate }) => {
                 Start a Project <ArrowUpRight className="w-4 h-4" />
             </button>
         </div>
+
+        {/* ======================== NFT MODAL ======================== */}
+        {selectedNFT && (
+            <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedNFT(null)}>
+                <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+                    <div className="flex justify-between items-start mb-6">
+                        <h3 className="text-2xl font-bold text-black">{selectedNFT.name}</h3>
+                        <button
+                            onClick={() => setSelectedNFT(null)}
+                            className="text-black/40 hover:text-black transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div className="aspect-square rounded-xl overflow-hidden mb-6 border border-black/10">
+                        <img
+                            src={selectedNFT.image}
+                            alt={selectedNFT.name}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <div className="space-y-4 text-sm text-black/60">
+                        <p>
+                            This digital ticket was issued to attendees of India Blockchain Week 2023.
+                            Holders had the opportunity to mint these tickets as NFTs, creating the first-ever IBW collectible series.
+                        </p>
+                        <p>
+                            Each ticket design incorporates the event's mandala-inspired visual identity,
+                            representing the convergence of traditional Indian art and cutting-edge blockchain technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* ======================== SOCIAL MEDIA TEMPLATE MODAL ======================== */}
+        {selectedTemplate && (
+            <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedTemplate(null)}>
+                <div className="bg-white rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+                    <div className="flex justify-between items-start mb-6">
+                        <h3 className="text-2xl font-bold text-black">{selectedTemplate.name}</h3>
+                        <button
+                            onClick={() => setSelectedTemplate(null)}
+                            className="text-black/40 hover:text-black transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div className="rounded-xl overflow-hidden mb-6 border border-black/10 bg-gray-50">
+                        <img
+                            src={selectedTemplate.image}
+                            alt={selectedTemplate.name}
+                            className="w-full h-auto object-contain"
+                        />
+                    </div>
+
+                    <div className="space-y-4 text-sm text-black/60">
+                        <p>
+                            Social media template designed for India Blockchain Week 2023 communications.
+                            These templates maintained consistent brand identity across all digital platforms.
+                        </p>
+                        <p>
+                            Each template incorporates the event's vibrant color palette and mandala-inspired visual elements,
+                            ensuring cohesive brand representation throughout the event's social media presence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )}
 
     </div>
   );
