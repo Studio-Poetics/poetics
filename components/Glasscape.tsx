@@ -207,7 +207,7 @@ const Glasscape: React.FC<GlasscapeProps> = ({ onNavigate }) => {
                 href="mailto:glasscape@poetics.studio" 
                 className="inline-block border-b border-white/30 pb-1 text-xl text-white hover:text-[#FF4400] hover:border-[#FF4400] transition-colors"
             >
-                glasscape@poetics.studio
+                pranshu@poetics.studio
             </a>
             <p className="text-xs font-mono text-white/30 mt-8 uppercase tracking-widest">
                 Available for Global Shipping • Made to Order in India
