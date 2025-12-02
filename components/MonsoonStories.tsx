@@ -190,13 +190,13 @@ const MonsoonStories: React.FC<MonsoonStoriesProps> = ({ onNavigate }) => {
                 </p>
 
                 <a
-                    href="https://www.instagram.com/100_monsoon_stories/"
+                    href="https://www.instagram.com/100.monsoon.stories/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-white/20 transition-all group"
                 >
                     <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    <span>@100_monsoon_stories</span>
+                    <span>@100.monsoon.stories</span>
                 </a>
             </div>
         </section>
